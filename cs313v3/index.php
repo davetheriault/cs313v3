@@ -1,4 +1,4 @@
-
+<?php $title = 'HomePage'; ?>
 <?php include 'includes/header.php'; ?>
 
 <main class="w3-container">
