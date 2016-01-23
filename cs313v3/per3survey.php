@@ -1,3 +1,5 @@
+<?php  ?>
+
 <?php $title = 'Survey'; ?>
 <?php include 'includes/header.php'; ?>
 
@@ -74,7 +76,7 @@
                                 </p>
                             </li>
                             <li>
-                                <p><input class="w3-input" type="submit" form="tra3form"/> </p><br>
+                                <p><input class="w3-input" type="submit" form="per3form"/> </p><br>
                             </li>
                         </ul>
 
