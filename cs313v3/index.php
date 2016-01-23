@@ -2,7 +2,7 @@
 <?php include 'includes/header.php'; ?>
 
 <main class="w3-container">
-    <div class="w3-third w3-margin-top">
+    <div class="w3-third w3-margin-top w3-margin-bottom">
         <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
             <h3 class="w3-red w3-padding w3-margin-0">Team Readiness Assignments</h3>
             <ul class="w3-ul w3-large">
@@ -21,7 +21,7 @@
             </ul>
         </div>
     </div>
-    <div class="w3-third w3-margin-top">
+    <div class="w3-third w3-margin-top w3-margin-bottom">
         <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
             <h3 class="w3-green w3-padding w3-margin-0">PHP / Java Projects</h3>
             <ul class="w3-ul w3-large">
@@ -40,7 +40,7 @@
             </ul>
         </div>
     </div>
-    <div class="w3-third w3-margin-top">
+    <div class="w3-third w3-margin-top w3-margin-bottom">
         <div class="w3-container w3-card-4 w3-padding-0 w3-margin">
             <h3 class="w3-green w3-padding w3-margin-0">About Me</h3>
             <div class="w3-container w3-padding-0 w3-white" style="overflow: hidden;">

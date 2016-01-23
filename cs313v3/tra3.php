@@ -6,7 +6,8 @@
     <div class="w3-margin-top w3-col l8">
         <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
             <h3 class="w3-red w3-padding w3-margin-0">Team Readiness Assignment - Week 3</h3>
-            <form id="tra3form" action="results.php" method="post" class="w3-container">
+            
+            <form id="tra3form" action="tra3results.php" method="post" class="w3-container">
                 <div class="w3-half w3-container">
                     <p>
                         <label>Name</label>

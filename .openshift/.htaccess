@@ -1,0 +1,9 @@
+//Custom 404 errors
+ErrorDocument 404 http://dave-geekowtlowd.rhcloud.com/cs313v3/404.php
+
+//Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+ 
