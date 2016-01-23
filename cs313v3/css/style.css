@@ -8,6 +8,7 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 
 body {
@@ -15,6 +16,8 @@ body {
     height: 100%;
     margin: 0;
     background-color: lightgray;
+    overflow-y: scroll;
+    
 }
 
 #container {
@@ -26,4 +29,31 @@ footer ul li {
     display: inline-block;
     list-style: none;
     margin: .75em;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+select{
+    color: #808080 !important; 
+}
+ 
+/* TRACK*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* HANDLE */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.2); 
 }

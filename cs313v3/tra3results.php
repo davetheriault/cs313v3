@@ -3,8 +3,8 @@
 <?php include 'includes/header.php'; ?>
 
 <main class="w3-container">
-    <div class="w3-margin-top w3-col l2"></div>
-    <div class="w3-margin-top w3-col l8">
+    <div class="w3-col l2"></div>
+    <div class=" w3-col l8">
         <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
             <h3 class="w3-red w3-padding w3-margin-0">Your info has been submitted</h3>
             <div class="w3-large w3-container w3-padding-xlarge">
