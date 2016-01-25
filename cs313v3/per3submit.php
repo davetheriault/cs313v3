@@ -24,4 +24,4 @@
         
 ?>
 
-<?php header('Location: http://dave-geekowtlowd.rhcloud.com/cs313v3/per3submit.php'); ?>
+<?php header('Location: http://dave-geekowtlowd.rhcloud.com/cs313v3/per3submit.php '); ?>
