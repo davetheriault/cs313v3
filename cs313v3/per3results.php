@@ -85,29 +85,23 @@
                             <li>True-Story - <?php echo $truleast; ?>&percnt;</li>
                             <li>Documentary - <?php echo $docleast; ?>&percnt;</li>
                         </ul>
-                        <ul>
+                        <ul class="w3-ul w3-quarter">
                             <li><h3>Theater Experience</h3></li>
                             <li>Imax - <?php echo $imaxnum; ?>&percnt;</li>
                             <li>3D - <?php echo $_3dnum; ?>&percnt;</li>
                             <li>Premium Sound - <?php echo $soundnum; ?>&percnt;</li>
                             <li>Doesn't Matter - <?php echo $_nanum; ?>&percnt;</li>
                         </ul>
-                            <li>
-                                <p>
-                                    <h3>Approximately how often do you watch movies at the theater?</h3>
-                                    
-                                </p>
-                            </li>
-                            <li>
-                                <p><input class="w3-input" type="submit" form="per3form"/> </p><br>
-                            </li>
+                            <li><h3>How Often...?</h3></li>
+                            <li>Every Month - <?php echo $_12num; ?>&percnt;</li>
+                            <li>Every Other Month - <?php echo $_6num; ?>&percnt;</li>
+                            <li>Few Times a Year - <?php echo $_3num; ?>&percnt;</li>
+                            <li>Once a Year - <?php echo $_1num; ?>&percnt;</li>
                         </ul>
 
                     </div>
-                    <div class="w3-half"
-                         
-                    </div>
-                </form>
+                    
+                
             </div>
         </div>
     </div>
