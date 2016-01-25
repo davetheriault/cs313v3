@@ -92,6 +92,7 @@
                             <li>Premium Sound - <?php echo $soundnum; ?>&percnt;</li>
                             <li>Doesn't Matter - <?php echo $_nanum; ?>&percnt;</li>
                         </ul>
+                        <ul class="w3-ul w3-quarter">
                             <li><h3>How Often...?</h3></li>
                             <li>Every Month - <?php echo $_12num; ?>&percnt;</li>
                             <li>Every Other Month - <?php echo $_6num; ?>&percnt;</li>
