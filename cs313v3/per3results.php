@@ -8,16 +8,16 @@ $reslts = file_get_contents('surveydata.txt');
 $totgenre = substr_count($reslts, "g");
 
 //Percent of votes for each genre
-$gNum['action'] = round((substr_count($reslts, "g1") / $totgenre * 100), 2);
-$gNum['science'] = round((substr_count($reslts, "g2") / $totgenre * 100), 2);
-$gNum['drama'] = round((substr_count($reslts, "g3") / $totgenre * 100), 2);
-$gNum['comedy'] = round((substr_count($reslts, "g4") / $totgenre * 100), 2);
-$gNum['animation'] = round((substr_count($reslts, "g5") / $totgenre * 100), 2);
-$gNum['horror'] = round((substr_count($reslts, "g6") / $totgenre * 100), 2);
-$gNum['suspense'] = round((substr_count($reslts, "g7") / $totgenre * 100), 2);
-$gNum['fantasy'] = round((substr_count($reslts, "g8") / $totgenre * 100), 2);
-$gNum['true'] = round((substr_count($reslts, "g0") / $totgenre * 100), 2);
-$gNum['documentary'] = round((substr_count($reslts, "g9") / $totgenre * 100), 2);
+$actnum = round((substr_count($reslts, "g1") / $totgenre * 100), 2);
+$scinum = round((substr_count($reslts, "g2") / $totgenre * 100), 2);
+$dranum = round((substr_count($reslts, "g3") / $totgenre * 100), 2);
+$comnum = round((substr_count($reslts, "g4") / $totgenre * 100), 2);
+$aninum = round((substr_count($reslts, "g5") / $totgenre * 100), 2);
+$hornum = round((substr_count($reslts, "g6") / $totgenre * 100), 2);
+$susnum = round((substr_count($reslts, "g7") / $totgenre * 100), 2);
+$fannum = round((substr_count($reslts, "g8") / $totgenre * 100), 2);
+$trunum = round((substr_count($reslts, "g0") / $totgenre * 100), 2);
+$docnum = round((substr_count($reslts, "g9") / $totgenre * 100), 2);
 
 //Percent of votes for least genre
 $actleast = round((substr_count($reslts, "l1") / $totgenre * 100), 2);
@@ -70,10 +70,16 @@ $li_wd = '); width: ';
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <li><h3>Favorite Genre</h3></li>
-                                <?php foreach($gNum as $gAvg) {
-                                    echo '<li style="background: url("images/red.png"); background-size: ' . $gAvg . 'px 100px; overflow: hidden;">'
-                                            . $gAvg . '&percnt;</li>';
-                                } ?> 
+                                <li>Action - <?php echo $actnum; ?>&percnt;</li>
+                                <li>Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
+                                <li>Drama - <?php echo $dranum; ?>&percnt;</li> 
+                                <li>Comedy - <?php echo $comnum; ?>&percnt;</li>
+                                <li>Animated - <?php echo $aninum; ?>&percnt;</li>
+                                <li>Horror - <?php echo $hornum; ?>&percnt;</li> 
+                                <li>Suspense - <?php echo $susnum; ?>&percnt;</li>
+                                <li>Fantasy - <?php echo $fannum; ?>&percnt;</li> 
+                                <li>True-Story - <?php echo $trunum; ?>&percnt;</li>
+                                <li>Documentary - <?php echo $docnum; ?>&percnt;</li> 
                             </div>
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
