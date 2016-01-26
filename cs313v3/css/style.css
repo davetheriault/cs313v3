@@ -57,3 +57,20 @@ select{
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(0,0,0,0.2); 
 }
+
+.results {
+    border-bottom: 1px solid #FFF;
+    position: relative;
+    }
+    
+.results li {
+    border: 1px solid #555;
+    border-left: none;
+    position: relative;
+    text-align: left;
+    height: 2.4em;
+    clear: both;
+    list-style-type: none;
+    padding: 5px;
+    background-color: #ff9966;
+    }
