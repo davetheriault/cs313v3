@@ -65,49 +65,49 @@ $_1num = round((substr_count($reslts, "a4") / $totgenre * 100), 2);
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Most Favorite Genre</h3>
-                                <li style="background-color: rgb(200,130,<?php echo $actnum*2; ?>); width: <?php echo $actnum*2.5+1; ?>px"> Action - <?php echo $actnum; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $scinum*2; ?>); width: <?php echo $scinum*2.5+1; ?>px"> Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
-                                <li style="background-color: rgb(200,130,<?php echo $dranum*2; ?>); width: <?php echo $dranum*2.5+1; ?>px"> Drama - <?php echo $dranum; ?>&percnt;</li> 
-                                <li style="background-color: rgb(200,130,<?php echo $comnum*2; ?>); width: <?php echo $comnum*2.5+1; ?>px"> Comedy - <?php echo $comnum; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $aninum*2; ?>); width: <?php echo $aninum*2.5+1; ?>px"> Animated - <?php echo $aninum; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $hornum*2; ?>); width: <?php echo $hornum*2.5+1; ?>px"> Horror - <?php echo $hornum; ?>&percnt;</li> 
-                                <li style="background-color: rgb(200,130,<?php echo $susnum*2; ?>); width: <?php echo $susnum*2.5+1; ?>px"> Suspense - <?php echo $susnum; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $fannum*2; ?>); width: <?php echo $fannum*2.5+1; ?>px"> Fantasy - <?php echo $fannum; ?>&percnt;</li> 
-                                <li style="background-color: rgb(200,130,<?php echo $trunum*2; ?>); width: <?php echo $trunum*2.5+1; ?>px"> True-Story - <?php echo $trunum; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $docnum*2; ?>); width: <?php echo $docnum*2.5+1; ?>px"> Documentary - <?php echo $docnum; ?>&percnt;</li> 
+                                <li style="background-color: rgb(200,130,<?php echo round($actnum)*2; ?>); width: <?php echo $actnum*2.5+1; ?>px"> Action - <?php echo $actnum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($scinum)*2; ?>); width: <?php echo $scinum*2.5+1; ?>px"> Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
+                                <li style="background-color: rgb(200,130,<?php echo round($dranum)*2; ?>); width: <?php echo $dranum*2.5+1; ?>px"> Drama - <?php echo $dranum; ?>&percnt;</li> 
+                                <li style="background-color: rgb(200,130,<?php echo round($comnum)*2; ?>); width: <?php echo $comnum*2.5+1; ?>px"> Comedy - <?php echo $comnum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($aninum)*2; ?>); width: <?php echo $aninum*2.5+1; ?>px"> Animated - <?php echo $aninum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($hornum)*2; ?>); width: <?php echo $hornum*2.5+1; ?>px"> Horror - <?php echo $hornum; ?>&percnt;</li> 
+                                <li style="background-color: rgb(200,130,<?php echo round($susnum)*2; ?>); width: <?php echo $susnum*2.5+1; ?>px"> Suspense - <?php echo $susnum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($fannum)*2; ?>); width: <?php echo $fannum*2.5+1; ?>px"> Fantasy - <?php echo $fannum; ?>&percnt;</li> 
+                                <li style="background-color: rgb(200,130,<?php echo round($trunum)*2; ?>); width: <?php echo $trunum*2.5+1; ?>px"> True-Story - <?php echo $trunum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($docnum)*2; ?>); width: <?php echo $docnum*2.5+1; ?>px"> Documentary - <?php echo $docnum; ?>&percnt;</li> 
                             </div>
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Least Favorite Genre</h3>
-                                <li style="background-color: rgb(200,130,<?php echo $actleast*2; ?>); width: <?php echo $actleast*2.5+1; ?>px"> Action - <?php echo $actleast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $scileast*2; ?>); width: <?php echo $scileast*2.5+1; ?>px"> Sci-Fi - <?php echo $scileast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $draleast*2; ?>); width: <?php echo $draleast*2.5+1; ?>px"> Drama - <?php echo $draleast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $comleast*2; ?>); width: <?php echo $comleast*2.5+1; ?>px"> Comedy - <?php echo $comleast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $anileast*2; ?>); width: <?php echo $anileast*2.5+1; ?>px"> Animated - <?php echo $anileast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $horleast*2; ?>); width: <?php echo $horleast*2.5+1; ?>px"> Horror - <?php echo $horleast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $susleast*2; ?>); width: <?php echo $susleast*2.5+1; ?>px"> Suspense - <?php echo $susleast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $fanleast*2; ?>); width: <?php echo $fanleast*2.5+1; ?>px"> Fantasy - <?php echo $fanleast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $truleast*2; ?>); width: <?php echo $truleast*2.5+1; ?>px"> True-Story - <?php echo $truleast; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $docleast*2; ?>); width: <?php echo $docleast*2.5+1; ?>px"> Documentary - <?php echo $docleast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($actleast)*2; ?>); width: <?php echo $actleast*2.5+1; ?>px"> Action - <?php echo $actleast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($scileast)*2; ?>); width: <?php echo $scileast*2.5+1; ?>px"> Sci-Fi - <?php echo $scileast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($draleast)*2; ?>); width: <?php echo $draleast*2.5+1; ?>px"> Drama - <?php echo $draleast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($comleast)*2; ?>); width: <?php echo $comleast*2.5+1; ?>px"> Comedy - <?php echo $comleast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($anileast)*2; ?>); width: <?php echo $anileast*2.5+1; ?>px"> Animated - <?php echo $anileast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($horleast)*2; ?>); width: <?php echo $horleast*2.5+1; ?>px"> Horror - <?php echo $horleast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($susleast)*2; ?>); width: <?php echo $susleast*2.5+1; ?>px"> Suspense - <?php echo $susleast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($fanleast)*2; ?>); width: <?php echo $fanleast*2.5+1; ?>px"> Fantasy - <?php echo $fanleast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($truleast)*2; ?>); width: <?php echo $truleast*2.5+1; ?>px"> True-Story - <?php echo $truleast; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($docleast)*2; ?>); width: <?php echo $docleast*2.5+1; ?>px"> Documentary - <?php echo $docleast; ?>&percnt;</li>
                             </div>
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Theater Experience</h3>
-                                <li style="background-color: rgb(200,130,<?php echo $imaxnum*2; ?>); width: <?php echo $imaxnum*2.5+1; ?>px"> Imax - <?php echo $imaxnum; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $_3dnum*2; ?>); width: <?php echo $_3dnum*2.5+1; ?>px"> 3D - <?php echo $_3dnum; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $soundnum*2; ?>); width: <?php echo $soundnum*2.5+1; ?>px"> Sound - <?php echo $soundnum; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $_nanum*2; ?>); width: <?php echo $_nanum*2.5+1; ?>px"> Menh... - <?php echo $_nanum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($imaxnum)*2; ?>); width: <?php echo $imaxnum*2.5+1; ?>px"> Imax - <?php echo $imaxnum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($_3dnum)*2; ?>); width: <?php echo $_3dnum*2.5+1; ?>px"> 3D - <?php echo $_3dnum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($soundnum)*2; ?>); width: <?php echo $soundnum*2.5+1; ?>px"> Sound - <?php echo $soundnum; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($_nanum)*2; ?>); width: <?php echo $_nanum*2.5+1; ?>px"> Menh... - <?php echo $_nanum; ?>&percnt;</li>
                             </div>
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Theater Frequency</h3>
-                                <li style="background-color: rgb(200,130,<?php echo $_12num*2; ?>); width: <?php echo $_12num*2.5+1; ?>px"> Monthly - <?php echo $_12num; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $_6num*2; ?>); width: <?php echo $_6num*2.5+1; ?>px"> Bi-Monthly - <?php echo $_6num; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $_3num*2; ?>); width: <?php echo $_3num*2.5+1; ?>px"> Few Times - <?php echo $_3num; ?>&percnt;</li>
-                                <li style="background-color: rgb(200,130,<?php echo $_1num*2; ?>); width: <?php echo $_1num*2.5+1; ?>px"> Once p/Year - <?php echo $_1num; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($_12num)*2; ?>); width: <?php echo $_12num*2.5+1; ?>px"> Monthly - <?php echo $_12num; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($_6num)*2; ?>); width: <?php echo $_6num*2.5+1; ?>px"> Bi-Monthly - <?php echo $_6num; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($_3num)*2; ?>); width: <?php echo $_3num*2.5+1; ?>px"> Few Times - <?php echo $_3num; ?>&percnt;</li>
+                                <li style="background-color: rgb(200,130,<?php echo round($_1num)*2; ?>); width: <?php echo $_1num*2.5+1; ?>px"> Once p/Year - <?php echo $_1num; ?>&percnt;</li>
                             </div>
                         </ul>
                     </div>
