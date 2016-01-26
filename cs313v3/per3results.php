@@ -70,49 +70,49 @@ $li_wd = '); width: ';
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Most Favorite Genre</h3>
-                                <li>Action - <?php echo $actnum; ?>&percnt;</li>
-                                <li>Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
-                                <li>Drama - <?php echo $dranum; ?>&percnt;</li> 
-                                <li>Comedy - <?php echo $comnum; ?>&percnt;</li>
-                                <li>Animated - <?php echo $aninum; ?>&percnt;</li>
-                                <li>Horror - <?php echo $hornum; ?>&percnt;</li> 
-                                <li>Suspense - <?php echo $susnum; ?>&percnt;</li>
-                                <li>Fantasy - <?php echo $fannum; ?>&percnt;</li> 
-                                <li>True-Story - <?php echo $trunum; ?>&percnt;</li>
-                                <li>Documentary - <?php echo $docnum; ?>&percnt;</li> 
+                                <li style="width: <?php echo $actnum*2; ?>px">Action - <?php echo $actnum; ?>&percnt;</li>
+                                <li style="width: <?php echo $scinum*2; ?>px">Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
+                                <li style="width: <?php echo $dranum*2; ?>px">Drama - <?php echo $dranum; ?>&percnt;</li> 
+                                <li style="width: <?php echo $comnum*2; ?>px">Comedy - <?php echo $comnum; ?>&percnt;</li>
+                                <li style="width: <?php echo $aninum*2; ?>px">Animated - <?php echo $aninum; ?>&percnt;</li>
+                                <li style="width: <?php echo $hornum*2; ?>px">Horror - <?php echo $hornum; ?>&percnt;</li> 
+                                <li style="width: <?php echo $susnum*2; ?>px">Suspense - <?php echo $susnum; ?>&percnt;</li>
+                                <li style="width: <?php echo $fannum*2; ?>px">Fantasy - <?php echo $fannum; ?>&percnt;</li> 
+                                <li style="width: <?php echo $trunum*2; ?>px">True-Story - <?php echo $trunum; ?>&percnt;</li>
+                                <li style="width: <?php echo $docnum*2; ?>px">Documentary - <?php echo $docnum; ?>&percnt;</li> 
                             </div>
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Least Favorite Genre</h3>
                                 <li style="width: <?php echo $actleast*2; ?>px">Action - <?php echo $actleast; ?>&percnt;</li>
-                                <li>Sci-Fi - <?php echo $scileast; ?>&percnt;</li>
-                                <li>Drama - <?php echo $draleast; ?>&percnt;</li>
-                                <li>Comedy - <?php echo $comleast; ?>&percnt;</li>
-                                <li>Animated - <?php echo $anileast; ?>&percnt;</li>
-                                <li>Horror - <?php echo $horleast; ?>&percnt;</li>
-                                <li>Suspense - <?php echo $susleast; ?>&percnt;</li>
-                                <li>Fantasy - <?php echo $fanleast; ?>&percnt;</li>
-                                <li>True-Story - <?php echo $truleast; ?>&percnt;</li>
-                                <li>Documentary - <?php echo $docleast; ?>&percnt;</li>
+                                <li style="width: <?php echo $scileast*2; ?>px">Sci-Fi - <?php echo $scileast; ?>&percnt;</li>
+                                <li style="width: <?php echo $draleast*2; ?>px">Drama - <?php echo $draleast; ?>&percnt;</li>
+                                <li style="width: <?php echo $comleast*2; ?>px">Comedy - <?php echo $comleast; ?>&percnt;</li>
+                                <li style="width: <?php echo $anileast*2; ?>px">Animated - <?php echo $anileast; ?>&percnt;</li>
+                                <li style="width: <?php echo $horleast*2; ?>px">Horror - <?php echo $horleast; ?>&percnt;</li>
+                                <li style="width: <?php echo $susleast*2; ?>px">Suspense - <?php echo $susleast; ?>&percnt;</li>
+                                <li style="width: <?php echo $fanleast*2; ?>px">Fantasy - <?php echo $fanleast; ?>&percnt;</li>
+                                <li style="width: <?php echo $truleast*2; ?>px">True-Story - <?php echo $truleast; ?>&percnt;</li>
+                                <li style="width: <?php echo $docleast*2; ?>px">Documentary - <?php echo $docleast; ?>&percnt;</li>
                             </div>
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Theater Experience</h3>
-                                <li>Imax - <?php echo $imaxnum; ?>&percnt;</li>
-                                <li>3D - <?php echo $_3dnum; ?>&percnt;</li>
-                                <li>Premium Sound - <?php echo $soundnum; ?>&percnt;</li>
-                                <li>Doesn't Matter - <?php echo $_nanum; ?>&percnt;</li>
+                                <li style="width: <?php echo $imaxnum*2; ?>px">Imax - <?php echo $imaxnum; ?>&percnt;</li>
+                                <li style="width: <?php echo $_3dnum*2; ?>px">3D - <?php echo $_3dnum; ?>&percnt;</li>
+                                <li style="width: <?php echo $soundnum*2; ?>px">Premium Sound - <?php echo $soundnum; ?>&percnt;</li>
+                                <li style="width: <?php echo $_nanum*2; ?>px">Doesn't Matter - <?php echo $_nanum; ?>&percnt;</li>
                             </div>
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Theater Frequency</h3>
-                                <li>Every Month - <?php echo $_12num; ?>&percnt;</li>
-                                <li>Every Other Month - <?php echo $_6num; ?>&percnt;</li>
-                                <li>Few Times a Year - <?php echo $_3num; ?>&percnt;</li>
-                                <li>Once a Year - <?php echo $_1num; ?>&percnt;</li>
+                                <li style="width: <?php echo $_12num*2; ?>px">Every Month - <?php echo $_12num; ?>&percnt;</li>
+                                <li style="width: <?php echo $_6num*2; ?>px">Every Other Month - <?php echo $_6num; ?>&percnt;</li>
+                                <li style="width: <?php echo $_3num*2; ?>px">Few Times a Year - <?php echo $_3num; ?>&percnt;</li>
+                                <li style="width: <?php echo $_1num*2; ?>px">Once a Year - <?php echo $_1num; ?>&percnt;</li>
                             </div>
                         </ul>
                     </div>
