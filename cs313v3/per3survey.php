@@ -82,6 +82,9 @@
                             <li>
                                 <p><input class="w3-input" type="submit" form="per3form"/> </p><br>
                             </li>
+                            <li>
+                                <a href="per3results.php">Skip to Results Page >>></a>
+                            </li>
                         </ul>
 
                     </div>
