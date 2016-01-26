@@ -70,7 +70,7 @@ $li_wd = '); width: ';
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <li><h3>Favorite Genre</h3></li>
-                                <li style="background-size: <?php echo $actnum; ?>px 100%;">Action - <?php echo $actnum; ?>&percnt;</li>
+                                <li style="background-size: 45px 100%;">Action - <?php echo $actnum; ?>&percnt;</li>
                                 <li style="background-size: <?php echo $scinum; ?>px 100%;">Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
                                 <li style="background-size: <?php echo $dranum; ?>px 100%;">Drama - <?php echo $dranum; ?>&percnt;</li> 
                                 <li style="background-size: <?php echo $comnum; ?>px 100%;">Comedy - <?php echo $comnum; ?>&percnt;</li>
