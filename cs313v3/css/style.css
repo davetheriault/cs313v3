@@ -73,4 +73,5 @@ select{
     list-style-type: none;
     padding: 5px;
     background-color: #ff9966;
+    white-space: nowrap;
     }
