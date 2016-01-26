@@ -24,5 +24,5 @@
         
 ?>
 
-<?php header('Location: http://localhost:5000/cs313v3/per3results.php '); ?>
-<?php // header('Location: http://dave-geekowtlowd.rhcloud.com/cs313v3/per3results.php '); ?>
+<?php // header('Location: http://localhost:5000/cs313v3/per3results.php '); ?>
+<?php header('Location: http://dave-geekowtlowd.rhcloud.com/cs313v3/per3results.php '); ?>
