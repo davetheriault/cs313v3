@@ -65,7 +65,7 @@
                 <h2 class="w3-red w3-padding w3-margin-0">Movie Survey Results  &nbsp; <span class="w3-medium"> (<?php echo $totgenre; ?> Votes)</span></h2>
 
                     <div class="w3-container w3-row w3-padding-bottom-4">
-                        <ul class="results w3-ul w3-quarter">
+                        <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <li><h3>Favorite Genre</h3></li>
                             <li>Action - <?php echo $actnum; ?>&percnt;</li>
                             <li>Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
@@ -78,7 +78,7 @@
                             <li>True-Story - <?php echo $trunum; ?>&percnt;</li>
                             <li>Documentary - <?php echo $docnum; ?>&percnt;</li> 
                         </ul>
-                        <ul class="results w3-ul w3-quarter">
+                        <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <li><h3>Least Favorite Genre</h3></li>
                             <li>Action - <?php echo $actleast; ?>&percnt;</li>
                             <li>Sci-Fi - <?php echo $scileast; ?>&percnt;</li>
@@ -91,14 +91,14 @@
                             <li>True-Story - <?php echo $truleast; ?>&percnt;</li>
                             <li>Documentary - <?php echo $docleast; ?>&percnt;</li>
                         </ul>
-                        <ul class="results w3-ul w3-quarter">
+                        <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <li><h3>Theater Experience</h3></li>
                             <li>Imax - <?php echo $imaxnum; ?>&percnt;</li>
                             <li>3D - <?php echo $_3dnum; ?>&percnt;</li>
                             <li>Premium Sound - <?php echo $soundnum; ?>&percnt;</li>
                             <li>Doesn't Matter - <?php echo $_nanum; ?>&percnt;</li>
                         </ul>
-                        <ul class="results w3-ul w3-quarter">
+                        <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <li><h3>How Often...?</h3></li>
                             <li>Every Month - <?php echo $_12num; ?>&percnt;</li>
                             <li>Every Other Month - <?php echo $_6num; ?>&percnt;</li>
