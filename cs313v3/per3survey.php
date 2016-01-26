@@ -1,4 +1,8 @@
-<?php  ?>
+<?php session_start(); ?>
+
+<?php if ($_SESSION['vote'] == 'voted') {
+     header('Location: http://dave-geekowtlowd.rhcloud.com/cs313v3/per3results.php ');    
+} ?>
 
 <?php $title = 'Survey'; ?>
 <?php include 'includes/header.php'; ?>
