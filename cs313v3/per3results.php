@@ -73,13 +73,13 @@ $li_wd = '); width: ';
                                 <li style="background-size: <?php echo $actnum; ?>px 100%;">Action - <?php echo $actnum; ?>&percnt;</li>
                                 <li style="background-size: <?php echo $scinum; ?>px 100%;">Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
                                 <li style="background-size: <?php echo $dranum; ?>px 100%;">Drama - <?php echo $dranum; ?>&percnt;</li> 
-                                <li style="background-size: <?php echo ; ?>px 100%;">Comedy - <?php echo $comnum; ?>&percnt;</li>
-                                <li style="background-size: <?php echo ; ?>px 100%;">Animated - <?php echo $aninum; ?>&percnt;</li>
-                                <li style="background-size: <?php echo ; ?>px 100%;">Horror - <?php echo $hornum; ?>&percnt;</li> 
-                                <li style="background-size: <?php echo ; ?>px 100%;">Suspense - <?php echo $susnum; ?>&percnt;</li>
-                                <li style="background-size: <?php echo ; ?>px 100%;">Fantasy - <?php echo $fannum; ?>&percnt;</li> 
-                                <li style="background-size: <?php echo ; ?>px 100%;">True-Story - <?php echo $trunum; ?>&percnt;</li>
-                                <li style="background-size: <?php echo ; ?>px 100%;">Documentary - <?php echo $docnum; ?>&percnt;</li> 
+                                <li style="background-size: <?php echo $comnum; ?>px 100%;">Comedy - <?php echo $comnum; ?>&percnt;</li>
+                                <li style="background-size: <?php echo $aninum; ?>px 100%;">Animated - <?php echo $aninum; ?>&percnt;</li>
+                                <li style="background-size: <?php echo $hornum; ?>px 100%;">Horror - <?php echo $hornum; ?>&percnt;</li> 
+                                <li style="background-size: <?php echo $susnum; ?>px 100%;">Suspense - <?php echo $susnum; ?>&percnt;</li>
+                                <li style="background-size: <?php echo $fannum; ?>px 100%;">Fantasy - <?php echo $fannum; ?>&percnt;</li> 
+                                <li style="background-size: <?php echo $trunum; ?>px 100%;">True-Story - <?php echo $trunum; ?>&percnt;</li>
+                                <li style="background-size: <?php echo $docnum; ?>px 100%;">Documentary - <?php echo $docnum; ?>&percnt;</li> 
                             </div>
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
