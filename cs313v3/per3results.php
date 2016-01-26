@@ -108,7 +108,7 @@ $li_wd = '); width: ';
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <h3 class="w3-green w3-padding">Theater Frequency</h3>
+                                <h3>Theater Frequency</h3>
                                 <li>Every Month - <?php echo $_12num; ?>&percnt;</li>
                                 <li>Every Other Month - <?php echo $_6num; ?>&percnt;</li>
                                 <li>Few Times a Year - <?php echo $_3num; ?>&percnt;</li>
