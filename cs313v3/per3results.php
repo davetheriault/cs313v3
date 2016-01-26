@@ -69,7 +69,7 @@ $li_wd = '); width: ';
                     <div class="w3-row">
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <li><h3>Favorite Genre</h3></li>
+                                <li><h3>Most Favorite Genre</h3></li>
                                 <li>Action - <?php echo $actnum; ?>&percnt;</li>
                                 <li>Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
                                 <li>Drama - <?php echo $dranum; ?>&percnt;</li> 
@@ -108,7 +108,7 @@ $li_wd = '); width: ';
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <li><h3>How Often...?</h3></li>
+                                <li><h3 class="w3-green w3-padding">Theater Frequency</h3></li>
                                 <li>Every Month - <?php echo $_12num; ?>&percnt;</li>
                                 <li>Every Other Month - <?php echo $_6num; ?>&percnt;</li>
                                 <li>Few Times a Year - <?php echo $_3num; ?>&percnt;</li>
