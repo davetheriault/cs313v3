@@ -80,7 +80,15 @@ select{
     
     #voteThanks {
         position: absolute;
-        
+        right: 0;
+    }
+    
+    @media screen and (max-width: 800px) {
+        #voteThanks {
+            position: fixed;
+            right: auto;
+            bottom: 0;
+        }
     }
     
     .rel {

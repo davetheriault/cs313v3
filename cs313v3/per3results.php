@@ -54,7 +54,7 @@ $_1num = round((substr_count($reslts, "a4") / $totgenre * 100), 2);
         <div class="rel w3-col s12 m12 l10">
             <?php
             if (isset($_SESSION['voted'])) {
-                echo '<div class="w3-padding" id="voteThanks">Your vote has been submitted. Thank you.</div>';
+                echo '<div class="w3-padding w3-dark-grey w3-card-8" id="voteThanks">Your vote has been submitted. Thank you.</div>';
             }
             ?>
             <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
