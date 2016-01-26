@@ -69,7 +69,7 @@ $li_wd = '); width: ';
                     <div class="w3-row">
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <li><h3>Most Favorite Genre</h3></li>
+                                <h3>Most Favorite Genre</h3>
                                 <li>Action - <?php echo $actnum; ?>&percnt;</li>
                                 <li>Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
                                 <li>Drama - <?php echo $dranum; ?>&percnt;</li> 
@@ -84,7 +84,7 @@ $li_wd = '); width: ';
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <li><h3>Least Favorite Genre</h3></li>
+                                <h3>Least Favorite Genre</h3>
                                 <li>Action - <?php echo $actleast; ?>&percnt;</li>
                                 <li>Sci-Fi - <?php echo $scileast; ?>&percnt;</li>
                                 <li>Drama - <?php echo $draleast; ?>&percnt;</li>
@@ -99,7 +99,7 @@ $li_wd = '); width: ';
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <li><h3>Theater Experience</h3></li>
+                                <h3>Theater Experience</h3>
                                 <li>Imax - <?php echo $imaxnum; ?>&percnt;</li>
                                 <li>3D - <?php echo $_3dnum; ?>&percnt;</li>
                                 <li>Premium Sound - <?php echo $soundnum; ?>&percnt;</li>
@@ -108,7 +108,7 @@ $li_wd = '); width: ';
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <li><h3 class="w3-green w3-padding">Theater Frequency</h3></li>
+                                <h3 class="w3-green w3-padding">Theater Frequency</h3>
                                 <li>Every Month - <?php echo $_12num; ?>&percnt;</li>
                                 <li>Every Other Month - <?php echo $_6num; ?>&percnt;</li>
                                 <li>Few Times a Year - <?php echo $_3num; ?>&percnt;</li>
