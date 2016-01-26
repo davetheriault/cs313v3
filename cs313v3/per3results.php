@@ -85,7 +85,7 @@ $li_wd = '); width: ';
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
                                 <h3>Least Favorite Genre</h3>
-                                <li>Action - <?php echo $actleast; ?>&percnt;</li>
+                                <li style="width: <?php echo $actleast*2; ?>px">Action - <?php echo $actleast; ?>&percnt;</li>
                                 <li>Sci-Fi - <?php echo $scileast; ?>&percnt;</li>
                                 <li>Drama - <?php echo $draleast; ?>&percnt;</li>
                                 <li>Comedy - <?php echo $comleast; ?>&percnt;</li>
