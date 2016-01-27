@@ -1,4 +1,10 @@
+<?php session_start(); ?>
 <?php $title = 'HomePage'; ?>
+
+<?php if (isset($_POST['endo'])) {
+     session_destroy();
+} ?>
+
 <?php include 'includes/header.php'; ?>
 
 <main class="w3-container">
@@ -42,7 +48,7 @@
     </div>
     <div class="w3-third">
         <div class="w3-container w3-card-4 w3-padding-0 w3-margin">
-            <h3 class="w3-green w3-padding w3-margin-0">About Me</h3>
+            <h3 class="w3-blue-grey w3-padding w3-margin-0">About Me</h3>
             <div class="w3-container w3-padding-0 w3-white" style="overflow: hidden;">
                 <div class="w3-image">
                     <img class="w3-half" src="images/face.jpg" alt="Profile Picture" />
@@ -50,6 +56,10 @@
                 <blockquote class="w3-half w3-blockquote w3-large w3-white w3-padding" style="bottom: 0;">"Hi. My name is David, and this is my site.</blockquote>
             </div>
         </div>
+        <form id="endSesh" action="" method="post" style="width: 100px; height: 30px;">
+            <input type="radio" name="endo" value="endo" checked hidden />
+            <input type="submit" form="endSesh" id="endSeshSub"/>
+        </form>
     </div>
 </main>
 
