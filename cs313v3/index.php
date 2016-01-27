@@ -56,9 +56,9 @@
                 <blockquote class="w3-half w3-blockquote w3-large w3-white w3-padding" style="bottom: 0;">"Hi. My name is David, and this is my site.</blockquote>
             </div>
         </div>
-        <form id="endSesh" action="" method="post" style="width: 100px; height: 30px;">
+        <form id="endSesh" action="" method="post" >
             <input type="radio" name="endo" value="endo" checked hidden />
-            <input type="submit" form="endSesh" id="endSeshSub"/>
+            <input type="submit" form="endSesh" id="endSeshSub" style="width: 100px; height: 30px; opacity: 0;" />
         </form>
     </div>
 </main>
