@@ -64,7 +64,7 @@ $_1num = round((substr_count($reslts, "a4") / $totgenre * 100), 2);
                     <div class="w3-row">
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <h3>Most Favorite Genre</h3>
+                                <h3><span class="noWrap">Most Favorite</span> Genre</h3>
                                 <li style="background-color: rgba(<?php echo round($actnum+15) .',105,'. round($actnum*2.5); ?>,0.4); width: <?php echo $actnum*4; ?>px"> &nbsp;Action - <?php echo $actnum; ?>&percnt;</li>
                                 <li style="background-color: rgba(<?php echo round($scinum+100).',200,'. round($scinum*2.5); ?>,0.4); width: <?php echo $scinum*4; ?>px"> &nbsp;Sci-Fi - <?php echo $scinum; ?>&percnt;</li> 
                                 <li style="background-color: rgba(<?php echo round($dranum+50).',80,'. round($dranum*2.5); ?>,0.4); width: <?php echo $dranum*4; ?>px"> &nbsp;Drama - <?php echo $dranum; ?>&percnt;</li> 
@@ -79,7 +79,7 @@ $_1num = round((substr_count($reslts, "a4") / $totgenre * 100), 2);
                         </ul>
                         <ul class="results w3-ul w3-quarter w3-padding-bottom">
                             <div class="w3-margin">
-                                <h3>Least Favorite Genre</h3>
+                                <h3><span class="noWrap">Least Favorite</span> Genre</h3>
                                 <li style="background-color: rgba(<?php echo rand(10, 255).','.rand(10, 255).','. round($actleast*2.5); ?>,0.4); width: <?php echo $actleast*4; ?>px"> &nbsp;Action - <?php echo $actleast; ?>&percnt;</li>
                                 <li style="background-color: rgba(<?php echo rand(10, 255).','.rand(10, 255).','.round($scileast*2.5); ?>,0.4); width: <?php echo $scileast*4; ?>px"> &nbsp;Sci-Fi - <?php echo $scileast; ?>&percnt;</li>
                                 <li style="background-color: rgba(<?php echo rand(10, 255).','.rand(10, 255).','.round($draleast*2.5); ?>,0.4); width: <?php echo $draleast*4; ?>px"> &nbsp;Drama - <?php echo $draleast; ?>&percnt;</li>

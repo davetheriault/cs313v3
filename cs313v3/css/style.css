@@ -77,6 +77,11 @@ select{
     padding-right: 0 !important;
     
     }
+    @media screen and (max-width) {
+        .results li {
+            font-size: 0.7em;
+        }
+    }
     
     #voteThanks {
         position: absolute;
@@ -96,4 +101,8 @@ select{
     
     .rel {
         position: relative;
+    }
+    
+    .noWrap {
+        text-wrap: none;
     }
