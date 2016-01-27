@@ -79,7 +79,7 @@ select{
     }
     @media screen and (max-width) {
         .results li {
-            font-size: 0.7em;
+            font-size: small;
         }
     }
     
@@ -105,4 +105,5 @@ select{
     
     .noWrap {
         text-wrap: none;
+        white-space: nowrap;
     }
