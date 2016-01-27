@@ -8,126 +8,124 @@
             
             <h3 class="w3-red w3-padding w3-margin-0">Team Readiness Activity - W4 - Conference Database</h3>
             
-            <div class="w3-blockquote">
-                MariaDB [conferenceDB]> show tables;
-+------------------------+
-| Tables_in_conferencedb |
-+------------------------+
-| note                   |
-| speaker                |
-| talk                   |
-| user                   |
-+------------------------+
-4 rows in set (0.00 sec)
-
-MariaDB [conferenceDB]> describe note;
-+---------+----------+------+-----+---------+----------------+
-| Field   | Type     | Null | Key | Default | Extra          |
-+---------+----------+------+-----+---------+----------------+
-| id      | int(11)  | NO   | PRI | NULL    | auto_increment |
-| talk_id | int(11)  | YES  | MUL | NULL    |                |
-| user_id | int(11)  | YES  | MUL | NULL    |                |
-| content | longtext | YES  |     | NULL    |                |
-| date    | date     | YES  |     | NULL    |                |
-+---------+----------+------+-----+---------+----------------+
-5 rows in set (0.01 sec)
-
-MariaDB [conferenceDB]> describe speaker
-    -> ;
-+------------+-------------+------+-----+---------+----------------+
-| Field      | Type        | Null | Key | Default | Extra          |
-+------------+-------------+------+-----+---------+----------------+
-| id         | int(11)     | NO   | PRI | NULL    | auto_increment |
-| first_name | varchar(30) | YES  |     | NULL    |                |
-| last_name  | varchar(30) | YES  |     | NULL    |                |
-+------------+-------------+------+-----+---------+----------------+
-3 rows in set (0.01 sec)
-
-MariaDB [conferenceDB]> describe talk;
-+------------+--------------+------+-----+---------+----------------+
-| Field      | Type         | Null | Key | Default | Extra          |
-+------------+--------------+------+-----+---------+----------------+
-| id         | int(11)      | NO   | PRI | NULL    | auto_increment |
-| conf_date  | date         | YES  |     | NULL    |                |
-| speaker_id | int(11)      | YES  | MUL | NULL    |                |
-| title      | varchar(100) | YES  |     | NULL    |                |
-| content    | longtext     | YES  |     | NULL    |                |
-+------------+--------------+------+-----+---------+----------------+
-5 rows in set (0.01 sec)
-
-MariaDB [conferenceDB]> describe user;
-+----------+-------------+------+-----+---------+----------------+
-| Field    | Type        | Null | Key | Default | Extra          |
-+----------+-------------+------+-----+---------+----------------+
-| id       | int(11)     | NO   | PRI | NULL    | auto_increment |
-| username | varchar(20) | YES  |     | NULL    |                |
-+----------+-------------+------+-----+---------+----------------+
-2 rows in set (0.01 sec)
-
-
-MariaDB [conferenceDB]> show create table user
-    -> ;
-+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Table | Create Table                                                                                                                                                     |
-+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| user  | CREATE TABLE `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
-+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-1 row in set (0.00 sec)
-
-MariaDB [conferenceDB]> show CREATE TABLE speaker;
-+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Table   | Create Table                                                                                                                                                                                                  |
-+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| speaker | CREATE TABLE `speaker` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(30) DEFAULT NULL,
-  `last_name` varchar(30) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
-+---------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+            <div class="w3-black" style="font-family: monospace;">
+                MariaDB [conferenceDB]> show tables; <br/>
++------------------------+ <br/>
+| Tables_in_conferencedb |<br/>
++------------------------+<br/>
+| note                   |<br/>
+| speaker                |<br/>
+| talk                   |<br/>
+| user                   |<br/>
++------------------------+<br/>
+4 rows in set (0.00 sec)<br/>
+<br/>
+MariaDB [conferenceDB]> describe note;<br/>
++---------+----------+------+-----+---------+----------------+<br/>
+| Field   | Type     | Null | Key | Default | Extra          |<br/>
++---------+----------+------+-----+---------+----------------+<br/>
+| id      | int(11)  | NO   | PRI | NULL    | auto_increment |<br/>
+| talk_id | int(11)  | YES  | MUL | NULL    |                |<br/>
+| user_id | int(11)  | YES  | MUL | NULL    |                |<br/>
+| content | longtext | YES  |     | NULL    |                |<br/>
+| date    | date     | YES  |     | NULL    |                |<br/>
++---------+----------+------+-----+---------+----------------+<br/>
+5 rows in set (0.01 sec)<br/>
+<br/>
+MariaDB [conferenceDB]> describe speaker;<br/>
++------------+-------------+------+-----+---------+----------------+<br/>
+| Field      | Type        | Null | Key | Default | Extra          |<br/>
++------------+-------------+------+-----+---------+----------------+<br/>
+| id         | int(11)     | NO   | PRI | NULL    | auto_increment |<br/>
+| first_name | varchar(30) | YES  |     | NULL    |                |<br/>
+| last_name  | varchar(30) | YES  |     | NULL    |                |<br/>
++------------+-------------+------+-----+---------+----------------+<br/>
+3 rows in set (0.01 sec)<br/>
+<br/>
+MariaDB [conferenceDB]> describe talk;<br/>
++------------+--------------+------+-----+---------+----------------+<br/>
+| Field      | Type         | Null | Key | Default | Extra          |<br/>
++------------+--------------+------+-----+---------+----------------+<br/>
+| id         | int(11)      | NO   | PRI | NULL    | auto_increment |<br/>
+| conf_date  | date         | YES  |     | NULL    |                |<br/>
+| speaker_id | int(11)      | YES  | MUL | NULL    |                |<br/>
+| title      | varchar(100) | YES  |     | NULL    |                |<br/>
+| content    | longtext     | YES  |     | NULL    |                |<br/>
++------------+--------------+------+-----+---------+----------------+<br/>
+5 rows in set (0.01 sec)<br/>
+<br/>
+MariaDB [conferenceDB]> describe user;<br/>
++----------+-------------+------+-----+---------+----------------+<br/>
+| Field    | Type        | Null | Key | Default | Extra          |<br/>
++----------+-------------+------+-----+---------+----------------+<br/>
+| id       | int(11)     | NO   | PRI | NULL    | auto_increment |<br/>
+| username | varchar(20) | YES  |     | NULL    |                |<br/>
++----------+-------------+------+-----+---------+----------------+<br/>
+2 rows in set (0.01 sec)<br/>
+<br/>
+<br/>
+MariaDB [conferenceDB]> show create table user;<br/>
++-------+-------------------------------------------------------+<br/>
+| Table | Create Table                                          |<br/>
++-------+-------------------------------------------------------+<br/>
+| user  | CREATE TABLE `user` (<br/>
+  `id` int(11) NOT NULL AUTO_INCREMENT,<br/>
+  `username` varchar(20) DEFAULT NULL,<br/>
+  PRIMARY KEY (`id`)<br/>
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |<br/>
++-------+-------------------------------------------------------+<br/>
+1 row in set (0.00 sec)<br/>
+<br/>
+MariaDB [conferenceDB]> show CREATE TABLE speaker;<br/>
++---------+-----------------------------------------------------+<br/>
+| Table   | Create Table                                        |<br/>                                                                                                                                                    |
++---------+-----------------------------------------------------+<br/>
+| speaker | CREATE TABLE `speaker` (<br/>
+  `id` int(11) NOT NULL AUTO_INCREMENT,<br/>
+  `first_name` varchar(30) DEFAULT NULL,<br/>
+  `last_name` varchar(30) DEFAULT NULL,<br/>
+  PRIMARY KEY (`id`)<br/>
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |<br/>
++---------+-----------------------------------------------------+<br/>
 1 row in set (0.00 sec)
 
 MariaDB [conferenceDB]> show create table talk;
-+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Table | Create Table                                                                                                                                                                                                                                                                                                                                                                                    |
-+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| talk  | CREATE TABLE `talk` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `conf_date` date DEFAULT NULL,
-  `speaker_id` int(11) DEFAULT NULL,
-  `title` varchar(100) DEFAULT NULL,
-  `content` longtext,
-  PRIMARY KEY (`id`),
-  KEY `FK_talk_speaker_id` (`speaker_id`),
-  CONSTRAINT `FK_talk_speaker_id` FOREIGN KEY (`speaker_id`) REFERENCES `speaker` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
-+-------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-1 row in set (0.00 sec)
-
-MariaDB [conferenceDB]> show create table note;
-+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Table | Create Table                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| note  | CREATE TABLE `note` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `talk_id` int(11) DEFAULT NULL,
-  `user_id` int(11) DEFAULT NULL,
-  `content` longtext,
-  `date` date DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK_note_user_id` (`user_id`),
-  KEY `FK_note_talk_id` (`talk_id`),
-  CONSTRAINT `FK_note_talk_id` FOREIGN KEY (`talk_id`) REFERENCES `talk` (`id`),
-  CONSTRAINT `FK_note_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 |
-+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-1 row in set (0.00 sec)
-
-
++-------+-------------------------------------------------------+<br/>
+| Table | Create Table                                          |<br/>                                                                                                                                                                                                                                                                                                                                          
++-------+-------------------------------------------------------+<br/>
+| talk  | CREATE TABLE `talk` (<br/>
+  `id` int(11) NOT NULL AUTO_INCREMENT,<br/>
+  `conf_date` date DEFAULT NULL,<br/>
+  `speaker_id` int(11) DEFAULT NULL,<br/>
+  `title` varchar(100) DEFAULT NULL,<br/>
+  `content` longtext,<br/>
+  PRIMARY KEY (`id`),<br/>
+  KEY `FK_talk_speaker_id` (`speaker_id`),<br/>
+  CONSTRAINT `FK_talk_speaker_id` FOREIGN KEY (`speaker_id`) REFERENCES `speaker` (`id`)<br/>
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |<br/>
++-------+-------------------------------------------------------+<br/>
+1 row in set (0.00 sec)<br/>
+<br/>
+MariaDB [conferenceDB]> show create table note;<br/>
++-------+-------------------------------------------------------+<br/>
+| Table | Create Table                                          |<br/>
++-------+-------------------------------------------------------+<br/>
+| note  | CREATE TABLE `note` (<br/>
+  `id` int(11) NOT NULL AUTO_INCREMENT,<br/>
+  `talk_id` int(11) DEFAULT NULL,<br/>
+  `user_id` int(11) DEFAULT NULL,<br/>
+  `content` longtext,<br/>
+  `date` date DEFAULT NULL,<br/>
+  PRIMARY KEY (`id`),<br/>
+  KEY `FK_note_user_id` (`user_id`),<br/>
+  KEY `FK_note_talk_id` (`talk_id`),<br/>
+  CONSTRAINT `FK_note_talk_id` FOREIGN KEY (`talk_id`) REFERENCES `talk` (`id`),<br/>
+  CONSTRAINT `FK_note_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)<br/>
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 |<br/>
++-------+-------------------------------------------------------+<br/>
+1 row in set (0.00 sec)<br/>
+<br/>
+<br/>
 
             </div>
         </div>
