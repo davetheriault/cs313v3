@@ -32,7 +32,7 @@
             <h3 class="w3-green w3-padding w3-margin-0">PHP / Java Projects</h3>
             <ul class="w3-ul w3-large">
                 <li><a href="per3survey.php">Week 3 - Survey</a></li>
-                <li><a href="#">Week 4</a></li>
+                <li><a href="per4.php">Week 4 - DB Set Up</a></li>
                 <li><a href="#">Week 5</a></li>
                 <li><a href="#">Week 6</a></li>
                 <li><a href="#">Week 7</a></li>
