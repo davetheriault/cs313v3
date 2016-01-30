@@ -13,7 +13,7 @@
             <h3 class="w3-red w3-padding w3-margin-0">Team Readiness Assignments</h3>
             <ul class="w3-ul w3-large">
                 <li><a href="tra3.php">Week 3 - Form</a></li>
-                <li><a href="#">Week 4</a></li>
+                <li><a href="tra4.php">Week 4 - Conference DB</a></li>
                 <li><a href="#">Week 5</a></li>
                 <li><a href="#">Week 6</a></li>
                 <li><a href="#">Week 7</a></li>

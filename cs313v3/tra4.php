@@ -8,7 +8,7 @@
             
             <h3 class="w3-red w3-padding w3-margin-0">Team Readiness Activity - W4 - Conference Database</h3>
             
-            <div class="w3-black" style="font-family: monospace;">
+            <div class="w3-black w3-padding" style="font-family: monospace;">
                 MariaDB [conferenceDB]> show tables; <br/>
 +------------------------+ <br/>
 | Tables_in_conferencedb |<br/>
@@ -87,9 +87,9 @@ MariaDB [conferenceDB]> show CREATE TABLE speaker;<br/>
   PRIMARY KEY (`id`)<br/>
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 |<br/>
 +---------+-----------------------------------------------------+<br/>
-1 row in set (0.00 sec)
-
-MariaDB [conferenceDB]> show create table talk;
+1 row in set (0.00 sec)<br/>
+<br/>
+MariaDB [conferenceDB]> show create table talk;<br/>
 +-------+-------------------------------------------------------+<br/>
 | Table | Create Table                                          |<br/>                                                                                                                                                                                                                                                                                                                                          
 +-------+-------------------------------------------------------+<br/>
