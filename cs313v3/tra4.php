@@ -83,7 +83,7 @@ MariaDB [conferenceDB]> show create table user;<br/>
 <br/>
 MariaDB [conferenceDB]> show CREATE TABLE speaker;<br/>
 +---------+-----------------------------------------------------+<br/>
-| Table * | Create Table ************************************** |<br/>                                                                                                                                                    |
+| Table * | Create Table ************************************** |<br/>
 +---------+-----------------------------------------------------+<br/>
 | speaker | CREATE TABLE `speaker` ( ************************** |<br/>
 | ******* | `id` int(11) NOT NULL AUTO_INCREMENT, ************* |<br/>
