@@ -99,7 +99,7 @@ MariaDB [conferenceDB]> show create table talk;<br/>
 +-------+-------------------------------------------------------+<br/>
 | Table | Create Table **************************************** |<br/>                                                                                                                                                                                                                                                                                                                                          
 +-------+-------------------------------------------------------+<br/>
-| talk  | CREATE TABLE `talk` ( ******************************* |<br/>
+| talk &nbsp;| CREATE TABLE `talk` ( ******************************* |<br/>
 | ***** | `id` int(11) NOT NULL AUTO_INCREMENT, *************** |<br/>
 | ***** | `conf_date` date DEFAULT NULL, ********************** |<br/>
 | ***** | `speaker_id` int(11) DEFAULT NULL, ****************** |<br/>
