@@ -13,33 +13,33 @@
 +------------------------+ <br/>
 | Tables_in_conferencedb |<br/>
 +------------------------+<br/>
-| note                   |<br/>
-| speaker                |<br/>
-| talk                   |<br/>
-| user                   |<br/>
+| note ***************** |<br/>
+| speaker ************** |<br/>
+| talk ***************** |<br/>
+| user ***************** |<br/>
 +------------------------+<br/>
 4 rows in set (0.00 sec)<br/>
 <br/>
 MariaDB [conferenceDB]> describe note;<br/>
 +---------+----------+------+-----+---------+----------------+<br/>
-| Field   | Type     | Null | Key | Default | Extra          |<br/>
+| Field * | Type *** | Null | Key | Default | Extra ******** |<br/>
 +---------+----------+------+-----+---------+----------------+<br/>
-| id      | int(11)  | NO   | PRI | NULL    | auto_increment |<br/>
-| talk_id | int(11)  | YES  | MUL | NULL    |                |<br/>
-| user_id | int(11)  | YES  | MUL | NULL    |                |<br/>
-| content | longtext | YES  |     | NULL    |                |<br/>
-| date    | date     | YES  |     | NULL    |                |<br/>
+| id **** | int(11) *| NO   | PRI | NULL ** | auto_increment |<br/>
+| talk_id | int(11) *| YES  | MUL | NULL ** | ************** |<br/>
+| user_id | int(11) *| YES  | MUL | NULL ** | ************** |<br/>
+| content | longtext | YES  | --- | NULL ** | ************** |<br/>
+| date ** | date *** | YES  | *** | NULL ** | ************** |<br/>
 +---------+----------+------+-----+---------+----------------+<br/>
 5 rows in set (0.01 sec)<br/>
 <br/>
 MariaDB [conferenceDB]> describe speaker;<br/>
-+------------+-------------+------+-----+---------+----------------+<br/>
-| Field      | Type        | Null | Key | Default | Extra          |<br/>
-+------------+-------------+------+-----+---------+----------------+<br/>
-| id         | int(11)     | NO   | PRI | NULL    | auto_increment |<br/>
-| first_name | varchar(30) | YES  |     | NULL    |                |<br/>
-| last_name  | varchar(30) | YES  |     | NULL    |                |<br/>
-+------------+-------------+------+-----+---------+----------------+<br/>
++------------+-------------+-------+-----+---------+----------------+<br/>
+| Field **** | Type ****** | Null *| Key | Default | Extra ******** |<br/>
++------------+-------------+-------+-----+---------+----------------+<br/>
+| id ******* | int(11) *** | NO ** | PRI | NULL ** | auto_increment |<br/>
+| first_name | varchar(30) | YES * | *** | NULL ** | ************** |<br/>
+| last_name  | varchar(30) | YES * | *** | NULL ** | ************** |<br/>
++------------+-------------+----- -+-----+---------+----------------+<br/>
 3 rows in set (0.01 sec)<br/>
 <br/>
 MariaDB [conferenceDB]> describe talk;<br/>
