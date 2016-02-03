@@ -11,10 +11,10 @@
                 <h2 class="w3-red w3-padding w3-margin-0">Search</h2>
                 <div class="w3-container w3-padding-bottom-16" style="padding-top: 15px; padding-bottom: 15px;">
                     <p>Find entries by book...</p>
-                    <form id="ookbay" method="get" action="#">
+                    <form id="ookbay" method="get" action="tra3.php">
                         <label>Book:</label>
                         <input class="w3-input" type="text" name="book" />
-                        <button class="w3-btn w3-blue">Find</button>
+                        <input class="w3-btn w3-blue" type="submit" value="Find" form="ookbay" />
                     </form>
                 </div>
             </div>
@@ -27,9 +27,16 @@
                 <div class="w3-container w3-padding-bottom-16" style="padding-top: 15px; padding-bottom: 15px;">
                     <ul class="w3-ul">
                         <?php
-                        foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $row) {
-                            echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <br/>"'
-                            . $row['content'] . '"</li>';
+                        if (isset($_GET['book'])) {
+                            foreach ($db->query('SELECT book, chapter, verse, content FROM scripture WHERE book = "' . $_GET['book'] . '"') as $row) {
+                                echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <br/>"'
+                                . $row['content'] . '"</li>';
+                            }
+                        } else {
+                            foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $row) {
+                                echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <br/>"'
+                                . $row['content'] . '"</li>';
+                            }
                         }
                         ?>
                     </ul>
