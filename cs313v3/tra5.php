@@ -6,7 +6,11 @@
 
 <main class="w3-container">
     <div class="w3-row">
-        <div class="w3-col s4 m4 l4" style="line-height: 0.1;">&nbsp;</div>
+        <div class="w3-col s4 m4 l4" style="line-height: 0.1;">
+            <div class="w3-container w3-card-4 w3-white">
+                <h2 class="w3-red w3-padding w3-margin-0">Scriptures</h2>
+            </div>
+        </div>
         <div class="rel w3-col s8 m8 l8">
 
             <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
