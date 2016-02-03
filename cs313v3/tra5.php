@@ -14,7 +14,8 @@
                     <form id="ookbay" method="get" action="tra5.php">
                         <label>Book:</label>
                         <input class="w3-input" type="text" name="book" />
-                        <input class="w3-btn w3-blue" type="submit" value="Find" form="ookbay" />
+                        
+                        <p><input class="w3-btn w3-blue" type="submit" value="Find" form="ookbay" /> </p>
                     </form>
                 </div>
             </div>
