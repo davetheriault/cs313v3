@@ -6,7 +6,7 @@
 
 <main class="w3-container">
     <div class="w3-row">
-        <div class="rel w3-col s4 m4 l4" style="line-height: 0.1;">
+        <div class="rel w3-col s4 m4 l4">
             <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
                 <h2 class="w3-red w3-padding w3-margin-0">Search</h2>
                 <div class="w3-container w3-padding-bottom-16" style="padding-top: 15px; padding-bottom: 15px;">
