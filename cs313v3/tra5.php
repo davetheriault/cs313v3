@@ -12,7 +12,7 @@
             <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
                 <h2 class="w3-red w3-padding w3-margin-0">Scriptures</h2>
 
-                <div class="w3-container w3-padding-bottom-8">
+                <div class="w3-container w3-padding-bottom-16">
                     <ul class="w3-ul">
                         <?php
                         foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $row) {
