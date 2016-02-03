@@ -35,8 +35,8 @@
                     <ul class="w3-ul">
                         <?php
                         foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $row) {
-                            echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <br/>"'
-                            . $row['content'] . '"</li>';
+                            echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong><br/>&quot;'
+                            . $row['content'] . '&quot;</li>';
                         }
                         ?>
                     </ul>
