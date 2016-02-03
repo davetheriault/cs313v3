@@ -11,7 +11,7 @@
                 <h2 class="w3-red w3-padding w3-margin-0">Search</h2>
 
                 <div class="w3-container w3-padding-bottom-16" style="padding-top: 15px; padding-bottom: 15px;">
-                    <form id="scriptureSearch" method="get" action="tra5.php" class="w3-container">
+                   <!-- <form id="scriptureSearch" method="get" action="tra5.php" class="w3-container">
                         <h4>Find all entries for a certain book.</h4>
                             
                         <p>
@@ -22,7 +22,7 @@
                             <button class="w3-btn w3-blue" type="submit" form="scriptureSearch">Find</button>
                         </p>
 
-                    </form>
+                    </form> -->
                 </div>
             </div>
         </div>
