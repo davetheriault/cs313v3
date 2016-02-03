@@ -27,9 +27,9 @@
 
                 <div class="w3-container w3-padding-bottom-16" style="padding-top: 15px; padding-bottom: 15px;">
                     <ul class="w3-ul">
-                        <?php
+                        <?php 
                         if ($_GET['book'] != '' && $_GET['book'] != NULL) {
-                            foreach ($db->query('SELECT book, chapter, verse, content FROM scripture WHERE book = "' . $_GET['book'] . '"') as $row) {
+                            foreach ($db->query('SELECT book, chapter, verse, content FROM scripture WHERE book LIKE "%' . $_GET['book'] . '%"') as $row) {
                                 echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <br/>"'
                                 . $row['content'] . '"</li>';
                             }
