@@ -35,7 +35,7 @@ function password_check($password, $existing_hash) {
 function find_user_by_username($username) {
     global $db;
 
-    $safe_username = mysqli_real_escape_string($db, $username);
+    $safe_username = mysqli_real_escape_string($username);
 
 
     $query = "SELECT * ";
