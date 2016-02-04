@@ -1,4 +1,5 @@
 <?php require 'includes/functions.php'; ?>
+<?php require 'includes/dbConnect.php'; ?>
 <?php 
 $username = '';
 if (isset($_POST['login'])) {

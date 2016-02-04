@@ -1,4 +1,4 @@
-<?php require 'includes/dbScriptureConnect.php'; ?>
+<?php require 'includes/dbConnect.php'; ?>
 
 <?php $title = 'Scripture DB Access' ?>
 
