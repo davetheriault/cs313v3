@@ -37,7 +37,7 @@ function find_user_by_username($username) {
     $query .= "FROM user ";
     $query .= "WHERE username = '{$safe_username}' ";
     $query .= "LIMIT 1";
-    $user_set = mysqli_query($db, $query);
+    $user_set = $db->query($query);
     confirm_query($user_set);
     if ($user = mysqli_fetch_assoc($user_set)) {
         return $user;
