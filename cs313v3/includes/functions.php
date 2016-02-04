@@ -1,5 +1,10 @@
 <?php
 
+function redirect_to($new_location) {
+    header("Location: " . $new_location);
+    exit;
+}
+
 function attempt_login($username, $password) {
     $user = find_user_by_username($username);
     if ($user) {
@@ -38,6 +43,8 @@ function find_user_by_username($username) {
     $query .= "WHERE username = '{$safe_username}' ";
     $query .= "LIMIT 1";
     $user_set = mysqli_query($db, $query);
+    var_dump($user_set);
+    echo '<br/>'.$username;
     confirm_query($user_set);
     if ($user = mysqli_fetch_assoc($user_set)) {
         return $user;
