@@ -1,9 +1,19 @@
 <?php require 'includes/functions.php'; ?>
 <?php 
+$username = '';
 if (isset($_POST['login'])) {
     $username = $_POST['user'];
     $password = $_POST['pass'];
     $found_user = attempt_login($username, $password);
+    
+    if ($found_user) {
+        //successful login
+        redirect_to(collection.php);
+    } else {
+        //failed login
+        $_SESSION['message'] = 'Username / Password Do Not Match';
+    }
+    
 }
 ?>
 
@@ -21,7 +31,7 @@ if (isset($_POST['login'])) {
                     
                         <p>
                             <label>Username:</label>
-                            <input class="w3-input" type="text" name="user" required="required"/>
+                            <input class="w3-input" type="text" name="user" required="required" value="<?php echo htmlentities($username) ?>"/>
                         </p>
                         <p>
                             <label>Password</label>
