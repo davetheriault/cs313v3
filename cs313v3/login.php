@@ -1,3 +1,4 @@
+<?php require 'includes/functions.php'; ?>
 <?php 
 if (isset($_POST['login'])) {
     $username = $_POST['user'];
@@ -17,7 +18,7 @@ if (isset($_POST['login'])) {
                 <h3 class="w3-red w3-padding w3-margin-0">Log In</h3>
 
                 <form id="userLogin" action="login.php" method="post" class="w3-container">
-                    <div class="w3-half w3-container">
+                    
                         <p>
                             <label>Username:</label>
                             <input class="w3-input" type="text" name="user" required="required"/>
@@ -26,8 +27,7 @@ if (isset($_POST['login'])) {
                             <label>Password</label>
                             <input class="w3-input" type="password" name="pass" required="required"/>
                         </p>
-                        
-                    </div>
+                    
 
                     <p><input class="w3-input" name="login" type="submit" value="Log In" form="userLogin"/> </p><br>
                 </form>
