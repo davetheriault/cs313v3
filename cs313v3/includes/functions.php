@@ -47,12 +47,16 @@ function find_user_by_username($username) {
     $query .= "FROM user ";
     //$query .= "WHERE username = '{$safe_username}' ";
     $query .= "LIMIT 1";
-    $user_set = $db->query($query);
     
-    echo '<br/>'.$user_set['username'] . '<br/>'.$username .
-            '<br/>'.$user_set['username']. '<br/>';
+    $stmt = $db->prepare($query);
+    $stmt->execute();
     
-    confirm_query($user_set);
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+    var_dump($result);
+    echo '<br/>'.$result['username'] . '<br/>'.$username .
+            '<br/>'.$result['username']. '<br/>';
+    
+    confirm_query($result);
     if ($user = mysqli_fetch_assoc($user_set)) {
         return $user;
     } else {
