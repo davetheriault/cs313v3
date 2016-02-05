@@ -50,9 +50,12 @@ function find_user_by_username($username) {
     $stmt = $db->prepare($query);
     $stmt->execute();
     
-    $result[] = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    
+    $result = $stmt->fetchAll();
+    
     echo 'Var Dump: ';
-    var_dump($result[]);
+    var_dump($result);
     echo '<br/>Echo Result[username]: '.$result['username'] . 
             '<br/>Echo Result[password]: '.$result['password']. 
             '<br/>';
