@@ -36,16 +36,17 @@ function find_user_by_username($username) {
     global $db;
 
     $safe_username = mysqli_real_escape_string($username);
+    
+    echo $safe_username;
 
-
-    $query = "SELECT * ";
+    $query = "SELECT username, password ";
     $query .= "FROM user ";
     $query .= "WHERE username = '{$safe_username}' ";
     $query .= "LIMIT 1";
     $user_set = $db->query($query);
     
     var_dump($user_set);
-    echo '<br/>'.$username .
+    echo '<br/>'.$user_set['username'] . '<br/>'.$username .
             '<br/>'.$user_set['username']. '<br/>';
     
     confirm_query($user_set);
