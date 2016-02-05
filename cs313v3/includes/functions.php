@@ -26,10 +26,10 @@ function attempt_login($username, $password) {
     }
 }
 
-function password_check($password, $existing_hash) {
-    // existing hash contains format and salt at start
-    $hash = crypt($password, $existing_hash);
-    if ($hash === $existing_hash) {
+function password_check($password, $existing_pass) {
+ 
+   
+    if ($password === $existing_pass) {
         return true;
     } else {
         return false;
