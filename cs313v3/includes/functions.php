@@ -7,6 +7,8 @@ function redirect_to($new_location) {
 
 function attempt_login($username, $password) {
     echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
+    var_dump($password);
+    
     $user = find_user_by_username($username);
     
     echo '<br/><br/>$user: ' . $user;
