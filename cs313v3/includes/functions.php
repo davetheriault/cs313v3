@@ -6,6 +6,7 @@ function redirect_to($new_location) {
 }
 
 function attempt_login($username, $password) {
+    echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
     $user = find_user_by_username($username);
     if ($user) {
         // found user, now check password
@@ -45,7 +46,6 @@ function find_user_by_username($username) {
     $query .= "LIMIT 1";
     $user_set = $db->query($query);
     
-    var_dump($user_set);
     echo '<br/>'.$user_set['username'] . '<br/>'.$username .
             '<br/>'.$user_set['username']. '<br/>';
     
