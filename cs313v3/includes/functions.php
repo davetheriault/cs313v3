@@ -46,17 +46,16 @@ function find_user_by_username($username) {
     $query = "SELECT * ";
     $query .= "FROM user ";
     //$query .= "WHERE username = '{$safe_username}' ";
-    $query .= "LIMIT 1";
     
     $stmt = $db->prepare($query);
     $stmt->execute();
     
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+    $result[] = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
     echo 'Var Dump: ';
-    var_dump($result);
+    var_dump($result[]);
     echo '<br/>Echo Result[username]: '.$result['username'] . 
-            
-            '<br/>Echo Result[password]: '.$result['password']. '<br/>';
+            '<br/>Echo Result[password]: '.$result['password']. 
+            '<br/>';
     
     confirm_query($result);
     if ($user = mysqli_fetch_assoc($user_set)) {
