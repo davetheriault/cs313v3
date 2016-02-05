@@ -30,7 +30,9 @@ function attempt_login($username, $password) {
 }
 
 function password_check($password, $existing_pass) {
- 
+    var_dump($password);
+    echo '<br>';
+    var_dump($existing_pass);
    
     if ($password === $existing_pass) {
         echo '<br/>password match';
