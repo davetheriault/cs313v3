@@ -9,9 +9,11 @@ function attempt_login($username, $password) {
     echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
     $user = find_user_by_username($username);
     
+    echo '<br/><br/>$user: ' . $user;
+    
     if ($user) {
         // found user, now check password
-        if (password_check($password, $user["hashed_password"])) {
+        if (password_check($password, $user['password'])) {
             // password matches
             return $user;
         } else {
@@ -61,11 +63,8 @@ function find_user_by_username($username) {
             '<br/>';
     
     confirm_query($result);
-    if ($user = mysqli_fetch_assoc($user_set)) {
-        return $user;
-    } else {
-        return null;
-    }
+    
+    return $result;
 }
 
 function confirm_query($result_set) {
