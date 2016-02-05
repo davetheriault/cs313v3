@@ -37,11 +37,11 @@ function password_check($password, $existing_hash) {
 function find_user_by_username($username) {
     global $db;
 
-    echo 'find_user_by_username '.$username.'<db/>';
+    echo 'find_user_by_username '.$username.'<br/>';
     
-    $safe_username = $db->prepare($username);
+    $safe_username = $db->quote($username);
     
-    echo $safe_username;
+    echo 'Safe_Username: '.$safe_username . '<br/>';
 
     $query = "SELECT username, password ";
     $query .= "FROM user ";
