@@ -8,6 +8,7 @@ function redirect_to($new_location) {
 function attempt_login($username, $password) {
     echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
     $user = find_user_by_username($username);
+    
     if ($user) {
         // found user, now check password
         if (password_check($password, $user["hashed_password"])) {
@@ -36,6 +37,7 @@ function password_check($password, $existing_hash) {
 function find_user_by_username($username) {
     global $db;
 
+    echo 'find_user_by_username '.$username.'<db/>';
     $safe_username = mysqli_real_escape_string($username);
     
     echo $safe_username;
