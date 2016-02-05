@@ -45,7 +45,7 @@ function find_user_by_username($username) {
 
     $query = "SELECT username, password ";
     $query .= "FROM user ";
-    $query .= "WHERE username = '{$safe_username}' ";
+    //$query .= "WHERE username = '{$safe_username}' ";
     $query .= "LIMIT 1";
     $user_set = $db->query($query);
     
