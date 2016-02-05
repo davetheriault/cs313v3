@@ -39,7 +39,7 @@ function find_user_by_username($username) {
 
     echo 'find_user_by_username '.$username.'<db/>';
     
-    $safe_username = mysqli_real_escape_string($db, $username);
+    $safe_username = $db->prepare($username);
     
     echo $safe_username;
 
