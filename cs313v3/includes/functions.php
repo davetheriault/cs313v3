@@ -43,7 +43,7 @@ function find_user_by_username($username) {
     
     echo 'Safe_Username: '.$safe_username . '<br/>';
 
-    $query = "SELECT username, password ";
+    $query = "SELECT * ";
     $query .= "FROM user ";
     //$query .= "WHERE username = '{$safe_username}' ";
     $query .= "LIMIT 1";
