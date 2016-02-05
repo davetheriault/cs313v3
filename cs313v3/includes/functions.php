@@ -16,7 +16,7 @@ function attempt_login($username, $password) {
     if (isset($user)) {
         // found user, now check password
         echo '<br/>password_check called';
-        if (password_check($password, $user['password'])) {
+        if (password_check($password, $user[0]['password'])) {
             // password matches
             return true;
         } else {
