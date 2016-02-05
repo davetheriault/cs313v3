@@ -11,11 +11,12 @@ function attempt_login($username, $password) {
     
     echo '<br/><br/>$user: ' . $user;
     
-    if ($user) {
+    if (isset($user)) {
         // found user, now check password
+        echo '<br/>password_check called';
         if (password_check($password, $user['password'])) {
             // password matches
-            return $user;
+            return true;
         } else {
             // password does not match
             return false;
@@ -30,6 +31,7 @@ function password_check($password, $existing_pass) {
  
    
     if ($password === $existing_pass) {
+        echo '<br/>password match';
         return true;
     } else {
         return false;
