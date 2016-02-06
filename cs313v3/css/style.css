@@ -114,3 +114,7 @@ select{
         color: red;
         width: 100%;
     }
+    
+    .mngmnt a {
+        text-decoration: none;
+    }
