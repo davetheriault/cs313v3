@@ -1,3 +1,4 @@
+<?php include 'includes/session.php'; ?>
 <?php require 'includes/functions.php'; ?>
 <?php require 'includes/dbConnect.php'; ?>
 <?php 
@@ -21,6 +22,8 @@ if (isset($_POST['login'])) {
 
 <?php $title = 'Login'; ?>
 <?php include 'includes/header.php'; ?>
+
+<?php echo message(); ?>
 
 <main class="w3-container">
     <div class="w3-row">
