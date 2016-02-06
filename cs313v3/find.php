@@ -5,7 +5,7 @@
 <?php confirm_logged_in(); ?>
 
 
-<?php $title = 'Welcome ' . $_SESSION['username'] . '!'; ?>
+<?php $title = 'Find Movies'; ?>
 <?php include 'includes/header.php'; ?>
 
 <main class="w3-container">
@@ -13,11 +13,21 @@
         
         <div class="w3-col s8 m8 l8">
             <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
-                <h3 class="w3-red w3-padding w3-margin-0"><span style="text-transform: uppercase;"><?php echo $_SESSION['username']; ?></span>&apos;s Movie Collection</h3>
+                <h3 class="w3-red w3-padding w3-margin-0">
+                    Find Movies
+                </h3>
                 <div class="w3-container w3-padding">
+                    
+                    <form class="w3-form" id="movieSearch" action="find.php" method="get">
+                        <div class="w3-input">
+                            <input type="text" placeholder="Search Database..." name="find"/>
+                            <button type="submit" form="movieSearch"><i class="fa fa-search"></i></button>   
+                        </div>
+                    </form>
+                    
                     <ul class="w3-ul">
                        
-                        <?php 
+                        <?php /*
                         foreach (($db->query('SELECT movie_id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '"')) as $movie) {
                             foreach (($db->query('SELECT * FROM movie WHERE id = "' . $movie['movie_id'] . '" ORDER BY title ASC')) as $info) {
                                 echo '<li><h4><a href="movieinfo.php?title='. htmlentities($info['title']). '">'.$info['title'].'</a></h4><ul class="w3-ul"><li>MPAA Rating: '.$info['mpaa'].'</li>'
@@ -31,7 +41,7 @@
                                 }
                                 echo '</li></ul></li>';
                             }
-                        }
+                        }  */
                         ?>
                     </ul>
                 </div>
