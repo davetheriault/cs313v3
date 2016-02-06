@@ -107,3 +107,9 @@ select{
         text-wrap: none;
         white-space: nowrap;
     }
+    
+    .message {
+        position: absolute;
+        text-align: center;
+        color: red;
+    }
