@@ -20,7 +20,7 @@
 
                     <form class="w3-form" id="movieSearch" action="find.php" method="get">
                         <div class="w3-row">
-                        <input class="w3-col s10 m10 l10 w3-input w3-btn w3-light-grey" type="text" placeholder="Search Database..." name="find"/>
+                        <input class="w3-col s10 m10 l10 w3-input w3-btn w3-light-grey" type="text" placeholder="Search Movie Titles..." name="find"/>
                         <button class="w3-col s2 m2 l2 w3-input w3-btn w3-grey" type="submit" form="movieSearch">Find</button>   
                         </div>
                     </form>
@@ -48,20 +48,7 @@
 
             </div>
         </div>
-        <div class="w3-col s4 m4 l4">
-            <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
-                <h3 class="w3-red w3-padding w3-margin-0">
-                    Management
-                </h3>
-                <div class="w3-container w3-padding mngmnt">
-                    <ul class="w3-ul">
-                        <li><a href="addmovie.php"><i class="fa fa-plus"></i> Add a Movie</a></li>
-                        <li><a href="account.php"><i class="fa fa-cog"></i> Account</a></li>
-                        <li><a href="find.php"><i class="fa fa-search"></i> Find Movies</a></li>
-                    </ul>
-                </div>
-            </div> 
-        </div>
+        <?php include 'includes/management.php'; ?>
     </div>
 
 </main>
