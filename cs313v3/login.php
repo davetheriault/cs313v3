@@ -8,9 +8,11 @@ if (isset($_POST['login'])) {
     $password = $_POST['pass'];
     $found_user = attempt_login($username, $password);
     
-    if ($found_user) {
+    if (isset($found_user) && $found_user != false) {
         //successful login
         //echo '<br/>Redirect Login Success';
+        $_SESSION["admin_id"] = $found_user["id"];
+	$_SESSION["username"] = $found_user["username"];
         redirect_to('collection.php');
     } else {
         //failed login

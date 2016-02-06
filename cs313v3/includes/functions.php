@@ -10,19 +10,23 @@ function attempt_login($username, $password) {
     //echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
     //var_dump($password);
     
-    $user = find_user_by_username($username);
+    $find_user = find_user_by_username($username);
+    $user = $find_user[0];
     
     //echo '<br/><br/>$user: ' . $user;
     
     if (isset($user)) {
         // found user, now check password
         // echo '<br/>password_check called';
-        if (password_check($password, $user[0]['password'])) {
+        if (password_check($password, $user['password'])) {
             // password matches
-            return true;
+            return $user;
         } else {
             // password does not match
             return false;
+            
+            
+            
         }
     } else {
         // user not found
