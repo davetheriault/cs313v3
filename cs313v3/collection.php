@@ -44,8 +44,8 @@
                     Management
                 </h3>
                 <div class="w3-container w3-padding">
-                    <ul class="w3-ul">
-                        <li><a href="addmovie.php">+ Add a Movie</a></li>
+                    <ul class="w3-ul" style="text-decoration: none;">
+                        <li><a href="addmovie.php"><i class="fa fa-plus"></i> Add a Movie</a></li>
                         <li><a href="account.php"><i class="fa fa-cog"></i> Account</a></li>
                     </ul>
                 </div>
