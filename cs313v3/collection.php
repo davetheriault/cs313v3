@@ -16,7 +16,8 @@
                 <h3 class="w3-red w3-padding w3-margin-0"><span style="text-transform: uppercase;"><?php echo $_SESSION['username']; ?></span>&apos;s Movie Collection</h3>
                 <div class="w3-container w3-padding">
                     <ul class="w3-ul">
-                        <?php
+                       
+                        <?php echo 'SESSION[user_id]: '.$_SESSION['user_id'];
                         foreach (($db->query('SELECT movie_id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '"')) as $movie) {
                             foreach (($db->query('SELECT * FROM movie WHERE id = "' . $row['movie_id'] . '" ORDER BY title ASC')) as $info) {
                                 echo '<li><h4>'.$info['title'].'</h4><ul class="w3-ul"><li>MPAA Rating: '.$info['mpaa'].'</li>'
