@@ -48,6 +48,7 @@
                         <li><a href="addmovie.php"><i class="fa fa-plus"></i> Add a Movie</a></li>
                         <li><a href="account.php"><i class="fa fa-cog"></i> Account</a></li>
                         <li><a href="find.php"><i class="fa fa-search"></i> Find Movies</a></li>
+                        <li><a href="logout.php"><i class="fa fa-sign-out"></i> Log Out</a></li>
                     </ul>
                 </div>
             </div> 
