@@ -38,7 +38,7 @@
 
             </div>
         </div>
-        <?php include 'includes/management.php'; ?>
+        <?php require 'includes/management.php'; ?>
     </div>
 
 </main>
