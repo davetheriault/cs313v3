@@ -17,16 +17,16 @@
                 <div class="w3-container w3-padding">
                     <ul class="w3-ul">
                        
-                        <?php echo 'SESSION[user_id]: '.$_SESSION['user_id'];
+                        <?php 
                         foreach (($db->query('SELECT movie_id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '"')) as $movie) {
                             foreach (($db->query('SELECT * FROM movie WHERE id = "' . $movie['movie_id'] . '" ORDER BY title ASC')) as $info) {
-                                echo '<li><h4>'.$info['title'].'</h4><ul class="w3-ul"><li>MPAA Rating: '.$info['mpaa'].'</li>'
+                                echo '<li><h4><a href="movieinfo.php?title='. htmlentities($info['title']). '">'.$info['title'].'</a></h4><ul class="w3-ul"><li>MPAA Rating: '.$info['mpaa'].'</li>'
                                         . '<li>Runtime: '.$info['runtime'].'</li>'
                                         . '<li>Released: '.$info['release_year'].'</li>'
                                         . '<li>Genre(s): ';
                                 foreach (($db->query('SELECT genre_id FROM genre2movie WHERE movie_id = "'.$info['id'].'"')) as $genres) {
                                     foreach (($db->query('SELECT name FROM genre WHERE id = "'.$genres['genre_id'].'"')) as $genre) {
-                                        echo '<a>'.$genre['name'].'</a> ';
+                                        echo '<a href="genre.php?genre='.  htmlentities($genre['name']) .'">'.$genre['name'].'</a> ';
                                     }        
                                 }
                                 echo '</li></ul></li>';
