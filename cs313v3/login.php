@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
     if ($found_user) {
         //successful login
         //echo '<br/>Redirect Login Success';
-        redirect_to(collection.php);
+        redirect_to('collection.php');
     } else {
         //failed login
         $_SESSION['message'] = 'Username / Password Do Not Match';
