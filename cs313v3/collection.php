@@ -19,7 +19,7 @@
                        
                         <?php echo 'SESSION[user_id]: '.$_SESSION['user_id'];
                         foreach (($db->query('SELECT movie_id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '"')) as $movie) {
-                            foreach (($db->query('SELECT * FROM movie WHERE id = "' . $row['movie_id'] . '" ORDER BY title ASC')) as $info) {
+                            foreach (($db->query('SELECT * FROM movie WHERE id = "' . $movie['movie_id'] . '" ORDER BY title ASC')) as $info) {
                                 echo '<li><h4>'.$info['title'].'</h4><ul class="w3-ul"><li>MPAA Rating: '.$info['mpaa'].'</li>'
                                         . '<li>Runtime: '.$info['runtime'].'</li>'
                                         . '<li>Released: '.$info['release_year'].'</li>'
