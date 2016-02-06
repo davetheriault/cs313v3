@@ -20,8 +20,8 @@
 
                     <form class="w3-form" id="movieSearch" action="find.php" method="get">
                         <div class="w3-row">
-                        <input class="w3-col s10 m10 l10 w3-input w3-btn" type="text" placeholder="Search Database..." name="find"/>
-                        <button class="w3-col s2 m2 l2 w3-btn w3-grey" type="submit" form="movieSearch">Find</button>   
+                        <input class="w3-col s10 m10 l10 w3-input w3-btn w3-light-grey" type="text" placeholder="Search Database..." name="find"/>
+                        <button class="w3-col s2 m2 l2 w3-input w3-btn w3-grey" type="submit" form="movieSearch">Find</button>   
                         </div>
                     </form>
 
