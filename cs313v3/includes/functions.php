@@ -6,16 +6,17 @@ function redirect_to($new_location) {
 }
 
 function attempt_login($username, $password) {
-    echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
-    var_dump($password);
+    
+    //echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
+    //var_dump($password);
     
     $user = find_user_by_username($username);
     
-    echo '<br/><br/>$user: ' . $user;
+    //echo '<br/><br/>$user: ' . $user;
     
     if (isset($user)) {
         // found user, now check password
-        echo '<br/>password_check called';
+        // echo '<br/>password_check called';
         if (password_check($password, $user[0]['password'])) {
             // password matches
             return true;
@@ -30,12 +31,12 @@ function attempt_login($username, $password) {
 }
 
 function password_check($password, $existing_pass) {
-    var_dump($password);
-    echo '<br>';
-    var_dump($existing_pass);
+    //var_dump($password);
+    //echo '<br>';
+    //var_dump($existing_pass);
    
     if ($password === $existing_pass) {
-        echo '<br/>password match';
+        //echo '<br/>password match';
         return true;
     } else {
         return false;
@@ -45,11 +46,11 @@ function password_check($password, $existing_pass) {
 function find_user_by_username($username) {
     global $db;
 
-    echo 'find_user_by_username '.$username.'<br/>';
+    //echo 'find_user_by_username '.$username.'<br/>';
     
     $safe_username = $db->quote($username);
     
-    echo 'Safe_Username: '.$safe_username . '<br/>';
+    //echo 'Safe_Username: '.$safe_username . '<br/>';
 
     $query = "SELECT * ";
     $query .= "FROM user ";
@@ -62,11 +63,11 @@ function find_user_by_username($username) {
     
     $result = $stmt->fetchAll();
     
-    echo 'Var Dump: ';
-    var_dump($result);
-    echo '<br/>Echo Result[username]: '.$result[0]['username'] . 
-            '<br/>Echo Result[password]: '.$result[0]['password']. 
-            '<br/>';
+    //echo 'Var Dump: ';
+    //var_dump($result);
+    //echo '<br/>Echo Result[username]: '.$result[0]['username'] . 
+    //        '<br/>Echo Result[password]: '.$result[0]['password']. 
+    //        '<br/>';
     
     confirm_query($result);
     
