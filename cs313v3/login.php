@@ -11,7 +11,7 @@ if (isset($_POST['login'])) {
     if (isset($found_user) && $found_user != false) {
         //successful login
         //echo '<br/>Redirect Login Success';
-        $_SESSION["admin_id"] = $found_user["id"];
+        $_SESSION["user_id"] = $found_user["id"];
 	$_SESSION["username"] = $found_user["username"];
         redirect_to('collection.php');
     } else {
