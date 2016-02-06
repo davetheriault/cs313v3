@@ -46,9 +46,10 @@
                 <div class="w3-container w3-padding">
                     <ul class="w3-ul">
                         <li><a href="addmovie.php">+ Add a Movie</a></li>
+                        <li><a href="account.php"><i class="fa fa-cog"></i> Account</a></li>
                     </ul>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 
