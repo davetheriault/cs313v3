@@ -42,7 +42,7 @@
         <?php echo basename(__FILE__);
             $basename = basename(__FILE__);
             echo '<br>'.$basename;
-            if ($basename = 'collection.php'){
+            if ($basename == 'collection.php'){
                 echo '<br>MATCH!';
             } else { echo '<br>NOT MATCH!'; }
             ?>
