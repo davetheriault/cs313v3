@@ -1,4 +1,4 @@
-<?php $basename = basename(__FILE__); ?>
+
 
 <?php
     echo ''
@@ -10,7 +10,7 @@
        .     '<div class="w3-container w3-padding mngmnt">'
        .         '<ul class="w3-ul">'
        .             '<li';
-    if ($basename == 'management.php collection.php') {
+    if ($title == $_SESSION['username'] . '&apos;s Movies!') {
         echo ' class="w3-blue"';
     }
     echo '>'

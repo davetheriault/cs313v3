@@ -5,7 +5,7 @@
 <?php confirm_logged_in(); ?>
 
 
-<?php $title = 'Welcome ' . $_SESSION['username'] . '!'; ?>
+<?php $title = $_SESSION['username'] . '&apos;s Movies!'; ?>
 <?php include 'includes/header.php'; ?>
 
 <main class="w3-container">
