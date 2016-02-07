@@ -1,4 +1,5 @@
 <?php $basename = basename(__FILE__); ?>
+<?php echo $basename; ?>
 <?php
     echo ''
        . '<div class="w3-col s4 m4 l4">'

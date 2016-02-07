@@ -40,9 +40,9 @@
         </div>
         <?php require 'includes/management.php'; ?>
         <?php echo basename(__FILE__);
-            $basename = basename(__FILE__);
-            echo '<br>'.$basename;
-            if ($basename == 'collection.php'){
+            $base = basename(__FILE__);
+            echo '<br>'.$base;
+            if ($base == 'collection.php'){
                 echo '<br>MATCH!';
             } else { echo '<br>NOT MATCH!'; }
             ?>
