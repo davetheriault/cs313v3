@@ -8,5 +8,14 @@
                 
             </ul>
         </footer>
+        <script>
+            var sh = $(window).height();
+            var dh = $(document).height();
+            if (dh < sh) {
+                var foot = document.getElementsByTagName("FOOTER");
+                foot.style.position = "fixed";
+                foot.style.bottom = "0";
+            }
+        </script>
     </body>
 </html>
