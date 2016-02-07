@@ -7,7 +7,7 @@
        .    '<h3 class="w3-red w3-padding w3-margin-0">'
        .         'My Movies'
        .     '</h3>'
-       .     '<div class="w3-container w3-padding mngmnt">'
+       .     '<div class="w3-container mngmnt">'
        .         '<ul class="w3-ul">'
        .             '<li';
     if ($title == $_SESSION['username'] . '&apos;s Movies!') {
@@ -16,19 +16,19 @@
     echo '>'
        . '<a href="collection.php"><i class="fa fa-film"></i> My Collection</a></li>'
        . '<li';
-    if ($basename == 'management.php addmovie.php') {
+    if ($title == 'Add a Movie') {
         echo ' class="w3-blue"';
     }
     echo '>'
        . '<a href="addmovie.php"><i class="fa fa-plus"></i> Add a Movie</a></li>'
        . '<li'; 
-    if ($basename == 'management.php account.php') {
+    if ($title == 'My Account') {
         echo 'class="w3-blue"';
     }
     echo '>'
        . '<a href="account.php"><i class="fa fa-cog"></i> My Account</a></li>'
        . '<li'; 
-    if ($basename == 'management.php find.php') {
+    if ($title == 'Find Movies') {
         echo ' class="w3-blue"';
     } 
     echo '>'
