@@ -5,7 +5,7 @@
     <div class="w3-container w3-padding">
         <ul class="w3-ul">
             <?php
-            foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . $_GET['find'] . '%"') as $info) {
+            foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . $_GET['find'] . '%" ORDER BY title') as $info) {
                 echo '<li><h4><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></h4>'
                         . '<ul class="w3-ul">'
                         . '<li>MPAA Rating: ' . $info['mpaa'] . '</li>'
