@@ -6,18 +6,11 @@
         <ul class="w3-ul">
             <?php
             foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . $_GET['find'] . '%" ORDER BY title') as $info) {
-                echo '<li><h4><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></h4>'
-                        . '<ul class="w3-ul">'
-                        . '<li>MPAA Rating: ' . $info['mpaa'] . '</li>'
-                        . '<li>Runtime: ' . $info['runtime'] . '</li>'
-                        . '<li>Released: ' . $info['release_year'] . '</li>'
-                        . '<li>Genre(s): ';
-                foreach (($db->query('SELECT genre_id FROM genre2movie WHERE movie_id = "' . $info['id'] . '"')) as $genres) {
-                    foreach (($db->query('SELECT name FROM genre WHERE id = "' . $genres['genre_id'] . '"')) as $genre) {
-                        echo '<a href="genre.php?genre=' . htmlentities($genre['name']) . '">' . $genre['name'] . '</a> ';
-                    }
-                }
-                echo '</li></ul></li>';
+                echo '<li><strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong>'
+                        . ' <img src="images/'.$info['mpaa'].'.png" alt="'.$info['mpaa'].'"/>'
+                        . '(' . $info['release_year'] . ')'
+                        . ''
+                        . '</li>';
             }
             ?>
         </ul>
