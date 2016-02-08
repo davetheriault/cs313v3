@@ -33,6 +33,12 @@
     } 
     echo '>'
        . '<a href="find.php"><i class="fa fa-search"></i> Find Movies</a></li>'
+       . '<li'; 
+    if ($title == 'Log Out') {
+        echo ' class="w3-blue"';
+    } 
+    echo '>'
+       . '<a href="logout.php"><i class="fa fa-sign-out"></i> Log Out</a></li>'     
        . '</ul>'
        . '</div>'
        . '</div>' 

@@ -82,7 +82,7 @@ function confirm_query($result_set) {
 }
 
 function logged_in() {
-    if (isset($_SESSION['admin_id'])) {
+    if (isset($_SESSION['user_id'])) {
         return TRUE;
     } else {
         return FALSE;
@@ -93,6 +93,6 @@ function confirm_logged_in() {
     $logged = logged_in();
     if ($logged = FALSE) {
         redirect_to("login.php");
-    }
+    } 
 }
 ?>

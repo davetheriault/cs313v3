@@ -39,13 +39,7 @@
             </div>
         </div>
         <?php require 'includes/management.php'; ?>
-        <?php echo basename(__FILE__);
-            $base = basename(__FILE__);
-            echo '<br>'.$base;
-            if ($base == 'collection.php'){
-                echo '<br>MATCH!';
-            } else { echo '<br>NOT MATCH!'; }
-            ?>
+        
     </div>
 
 </main>

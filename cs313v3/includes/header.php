@@ -17,4 +17,5 @@
                         <a href="about.php">About</a>
                         <a href="collection.php">Movie Collection App</a>
                 </nav>
+                
             </header>
