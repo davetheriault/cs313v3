@@ -5,5 +5,5 @@
 	$_SESSION["user_id"] = NULL;
 	$_SESSION["username"] = NULL;
         var_dump($_SESSION);
-//redirect_to("login.php");
+        redirect_to("login.php");
 ?>
