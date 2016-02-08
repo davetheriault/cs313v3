@@ -24,31 +24,19 @@
                         <button class="w3-col s2 m2 l2 w3-input w3-btn w3-grey" type="submit" form="movieSearch">Find</button>   
                         </div>
                     </form>
-
-                    <ul class="w3-ul">
-
-                        <?php /*
-                          foreach (($db->query('SELECT movie_id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '"')) as $movie) {
-                          foreach (($db->query('SELECT * FROM movie WHERE id = "' . $movie['movie_id'] . '" ORDER BY title ASC')) as $info) {
-                          echo '<li><h4><a href="movieinfo.php?title='. htmlentities($info['title']). '">'.$info['title'].'</a></h4><ul class="w3-ul"><li>MPAA Rating: '.$info['mpaa'].'</li>'
-                          . '<li>Runtime: '.$info['runtime'].'</li>'
-                          . '<li>Released: '.$info['release_year'].'</li>'
-                          . '<li>Genre(s): ';
-                          foreach (($db->query('SELECT genre_id FROM genre2movie WHERE movie_id = "'.$info['id'].'"')) as $genres) {
-                          foreach (($db->query('SELECT name FROM genre WHERE id = "'.$genres['genre_id'].'"')) as $genre) {
-                          echo '<a href="genre.php?genre='.  htmlentities($genre['name']) .'">'.$genre['name'].'</a> ';
-                          }
-                          }
-                          echo '</li></ul></li>';
-                          }
-                          } */
-                        ?>
-                    </ul>
                 </div>
-
+                <?php  
+                if (isset($_GET['find'])) {
+                    include 'includes/results.php';
+                }
+                
+                ?>
             </div>
         </div>
         <?php include 'includes/management.php'; ?>
+        <div class="w3-col s8 m8 l8">
+            
+        </div>
     </div>
 
 </main>
