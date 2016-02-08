@@ -51,7 +51,7 @@
             <h3 class="w3-blue-grey w3-padding w3-margin-0">About Me</h3>
             <div class="w3-container w3-padding-0 w3-white" style="overflow: hidden;">
                 <div class="w3-image">
-                    <img class="w3-half" src="images/face.jpg" alt="Profile Picture" />
+                    <img class="w3-half" src="images/profile.jpg" alt="Profile Picture" />
                 </div>
                 <blockquote class="w3-half w3-blockquote w3-large w3-white w3-padding" style="bottom: 0;">"Hi. My name is David, and this is my site.</blockquote>
             </div>
