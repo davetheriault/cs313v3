@@ -82,7 +82,7 @@ function confirm_query($result_set) {
 }
 
 function logged_in() {
-    if ((isset($_SESSION['user_id'])) && ($_SESSION['user_id'] != null)) {
+    if ((isset($_SESSION['user_id'])) && ($_SESSION['user_id'] != NULL)) {
         return TRUE;
     } else {
         return FALSE;
