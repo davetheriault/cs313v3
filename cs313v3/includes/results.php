@@ -7,7 +7,7 @@
             <?php
             foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . $_GET['find'] . '%" ORDER BY title') as $info) {
                 echo '<li><strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong>'
-                        . ' <img src="images/'.$info['mpaa'].'.png" alt="'.$info['mpaa'].'"/>'
+                        . ' <img src="../images/'.$info['mpaa'].'.png" alt="'.$info['mpaa'].'"/>'
                         . '(' . $info['release_year'] . ')'
                         . ''
                         . '</li>';
