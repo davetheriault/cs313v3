@@ -84,6 +84,8 @@ function confirm_query($result_set) {
 function logged_in() {
     if ((isset($_SESSION['user_id'])) && ($_SESSION['user_id'] != NULL)) {
         return TRUE;
+    } if (($_SESSION['user_id'] == NULL) || ($_SESSION['username']) == NULL) {
+        return FALSE;
     } else {
         return FALSE;
     }
@@ -91,7 +93,7 @@ function logged_in() {
 
 function confirm_logged_in() {
     $logged = logged_in();
-    if ($logged = FALSE) {
+    if ($logged == FALSE) {
         redirect_to("login.php");
     } 
 }
