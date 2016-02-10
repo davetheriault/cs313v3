@@ -19,14 +19,14 @@
         
         $s_id->fetch(PDO::FETCH_ASSOC);
         
-        echo '$s_id = '.$s_id;
-        foreach ($_POST['topic'] as $top) {        
+        echo '$s_id = '.$s_id['id'];
+        /*foreach ($_POST['topic'] as $top) {        
             
             $t_id = $db->query('SELECT id FROM topics WHERE name = "'.$top.'"');
             
             $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id)'
                     . 'VALUES ("'.$t_id.'", "'.$s_id.'")');
-        }
+        } */
     }
 ?>
 
