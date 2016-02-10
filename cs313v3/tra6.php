@@ -11,12 +11,13 @@
     
     }
     
-    if (isset($_POST['topic[]'])){
-        var_dump($_POST['topic[]']);
+    if (isset($_POST['topic'])){
+        var_dump($_POST['topic']);
         $s_id = $db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
                                 . 'AND chapter = "'.$_POST['chapter'].'"'
                                 . 'AND verse = "'.$_POST['verse'].'"');
-        foreach ($_POST['topic[]'] as $top) {        
+        echo '$s_id = '.$s_id;
+        foreach ($_POST['topic'] as $top) {        
             
             $t_id = $db->query('SELECT id FROM topics WHERE name = "'.$top.'"');
             
