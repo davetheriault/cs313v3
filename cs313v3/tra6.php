@@ -12,7 +12,10 @@
     
     if (isset($_POST['topic'])){
         var_dump($_POST['topic']);
-        foreach ($db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
+        foreach ($_POST['topic'] as $cipot){
+            echo $cipot.'<br>';
+        }
+        /*foreach ($db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
                                 . 'AND chapter = "'.$_POST['chapter'].'"'
                                 . 'AND verse = "'.$_POST['verse'].'"') as $verse) {
             foreach ($_POST['topic'] as $top) {        
@@ -22,7 +25,7 @@
                 }
             }
         
-        }
+        } */
     }
 ?>
 
@@ -50,7 +53,7 @@
                         
                         <label>Topics:</label><br/>
                         <?php 
-                        foreach ($db->query('SELECT name FROM topics ORDER BY name ASC') as $topic) {
+                        foreach ($db->query('SELECT id, name FROM topics ORDER BY name ASC') as $topic) {
                             echo '<input type="checkbox" name="topic[]" value="'.$topic['name'].'" />'.$topic['name'].'<br/>';
                         }
                         ?>
