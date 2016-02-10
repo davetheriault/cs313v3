@@ -12,8 +12,8 @@
     }
     
     if (isset($_POST['topic'])){
+        var_dump($_POST['topic']);
         foreach ($_POST['topic'] as $top) {
-            $db->exec('INSERT INTO topics (name) VALUES ("'.$top.'")');
         
             $s_id = $db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
                                 . 'AND chapter = "'.$_POST['chapter'].'"'
