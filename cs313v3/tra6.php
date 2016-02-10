@@ -13,13 +13,16 @@
     
     if (isset($_POST['topic'])){
         var_dump($_POST['topic']);
-        $s_id = $db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
+        foreach ($db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
                                 . 'AND chapter = "'.$_POST['chapter'].'"'
-                                . 'AND verse = "'.$_POST['verse'].'"');
+                                . 'AND verse = "'.$_POST['verse'].'"') as $verse) {
+            foreach ($_POST['topic'] as $top) {        
+                foreach ($db->query('SELECT id FROM topics WHERE name = "'.$top.'"') as $tp) {
+                    $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id)'
+                    . 'VALUES ("'.$verse['id'].'", "'.$tp['id'].'")');
+        }
+        }
         
-        $s_id->fetch(PDO::FETCH_ASSOC);
-        
-        echo '$s_id = '.$s_id['id'];
         /*foreach ($_POST['topic'] as $top) {        
             
             $t_id = $db->query('SELECT id FROM topics WHERE name = "'.$top.'"');
