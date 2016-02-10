@@ -16,6 +16,9 @@
         $s_id = $db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
                                 . 'AND chapter = "'.$_POST['chapter'].'"'
                                 . 'AND verse = "'.$_POST['verse'].'"');
+        
+        $s_id->fetch(PDO::FETCH_ASSOC);
+        
         echo '$s_id = '.$s_id;
         foreach ($_POST['topic'] as $top) {        
             
