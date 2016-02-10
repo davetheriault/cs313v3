@@ -49,7 +49,7 @@
                         <label>Topics:</label><br/>
                         <?php 
                         foreach ($db->query('SELECT name FROM topics ORDER BY name ASC') as $topic) {
-                            echo '<input type="checkbox" name="topic" value="'.$topic['name'].'" />'.$topic['name'].'<br/>';
+                            echo '<input type="checkbox" name="topic[]" value="'.$topic['name'].'" />'.$topic['name'].'<br/>';
                         }
                         ?>
                         
