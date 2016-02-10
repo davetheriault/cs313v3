@@ -8,11 +8,20 @@
     if (isset($_POST['book'])){
         $db->exec('INSERT INTO scripture (book, chapter, verse, content)'
                 . 'VALUES ("'.$_POST['book'].'", "'.$_POST['chapter'].'", "'.$_POST['verse'].'", "'.$_POST['content'].'")');
+    
     }
     
     if (isset($_POST['topic'])){
         foreach ($_POST['topic'] as $top) {
             $db->exec('INSERT INTO topics (name) VALUES ("'.$top.'")');
+        
+            $s_id = $db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
+                                . 'AND chapter = "'.$_POST['chapter'].'"'
+                                . 'AND verse = "'.$_POST['verse'].'"');
+            $t_id = $db->query('SELECT id FROM topics WHERE name = "'.$top.'"');
+            
+            $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id)'
+                    . 'VALUES ("'.$t_id.'", "'.$s_id.'")');
         }
     }
 ?>
@@ -65,12 +74,14 @@
                                 . $row['content'] . '"</li>';
                             }
                         } else {
-                            foreach ($db->query('SELECT book, chapter, verse, content FROM scripture') as $row) {
+                            foreach ($db->query('SELECT id, book, chapter, verse, content FROM scripture') as $row) {
                                 echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <br/>"'
-                                . $row['content'] . '"'
+                                        . $row['content'] . '"'
                                         . '<ul class="w3-ul">';
-                                foreach ($db->query('SELECT name FROM topics ORDER BY name ASC') as $tpc) {
+                                foreach ($db->query('SELECT topic_id FROM scripture2topic WHERE scripture_id = "'.$row['id'].'"') as $tid) {
+                                    foreach ($db->query('SELECT name FROM topics WHERE id = "'.$tid['topic_id'].'"') as $tpc) {
                                     echo '<li>'.$tpc['name'].'</li>';
+                                    }
                                 }
                                 echo '</ul>';
                             }
