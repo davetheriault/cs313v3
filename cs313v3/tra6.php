@@ -2,7 +2,6 @@
 
 <?php $title = 'Scripture DB Add' ?>
 
-<?php include 'includes/header.php'; ?>
 
 <?php 
     if (isset($_POST['book'])){
@@ -20,18 +19,14 @@
                 foreach ($db->query('SELECT id FROM topics WHERE name = "'.$top.'"') as $tp) {
                     $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id)'
                     . 'VALUES ("'.$verse['id'].'", "'.$tp['id'].'")');
-        }
-        }
+                }
+            }
         
-        /*foreach ($_POST['topic'] as $top) {        
-            
-            $t_id = $db->query('SELECT id FROM topics WHERE name = "'.$top.'"');
-            
-            $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id)'
-                    . 'VALUES ("'.$t_id.'", "'.$s_id.'")');
-        } */
+        }
     }
 ?>
+
+<?php include 'includes/header.php'; ?>
 
 <main class="w3-container">
     <div class="w3-row">
