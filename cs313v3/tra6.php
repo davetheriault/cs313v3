@@ -11,13 +11,13 @@
     
     }
     
-    if (isset($_POST['topic'])){
-        var_dump($_POST['topic']);
-        foreach ($_POST['topic'] as $top) {
-        
-            $s_id = $db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
+    if (isset($_POST['topic[]'])){
+        var_dump($_POST['topic[]']);
+        $s_id = $db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
                                 . 'AND chapter = "'.$_POST['chapter'].'"'
                                 . 'AND verse = "'.$_POST['verse'].'"');
+        foreach ($_POST['topic[]'] as $top) {        
+            
             $t_id = $db->query('SELECT id FROM topics WHERE name = "'.$top.'"');
             
             $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id)'
