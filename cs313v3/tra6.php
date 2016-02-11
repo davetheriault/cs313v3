@@ -8,6 +8,9 @@
         $db->exec('INSERT INTO scripture (book, chapter, verse, content)'
                 . 'VALUES ("'.$_POST['book'].'", "'.$_POST['chapter'].'", "'.$_POST['verse'].'", "'.$_POST['content'].'")');
     }
+    if (isset($_POST['newtopic'])) {
+        $db->exec('INSERT INTO topics (name) values ("' . $_POST['newtopic'] . '")');
+    }
     
     if (isset($_POST['topic'])){
         var_dump($_POST['topic']);
@@ -38,18 +41,10 @@
                     . '"' . $t_id['id'] . '", '
                     . '"' . $s_id['id'] . '")');
         }
-        /*foreach ($db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
-                                . 'AND chapter = "'.$_POST['chapter'].'"'
-                                . 'AND verse = "'.$_POST['verse'].'"') as $verse) {
-            foreach ($_POST['topic'] as $top) {        
-                foreach ($db->query('SELECT id FROM topics WHERE name = "'.$top.'"') as $tp) {
-                    $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id)'
-                    . 'VALUES ("'.$verse['id'].'", "'.$tp['id'].'")');
-                }
-            }
         
-        } */
     }
+    
+    
 ?>
 
 <?php include 'includes/header.php'; ?>
@@ -82,7 +77,7 @@
                         }
                         ?>
                             <li><input type="checkbox" name="other" id="other" /> 
-                                <input type="text" id="newtopic" name="newtopic" placeholder="New Topic..." disabled=""/></li>
+                                <input type="text" id="newtopic" name="newtopic" placeholder=" New Topic..." disabled=""/></li>
                         </ul>
                         <input type="submit" form="addScript" value="Add Scripture" class="w3-btn"/>
                         
