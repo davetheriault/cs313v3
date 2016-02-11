@@ -97,4 +97,37 @@ function confirm_logged_in() {
         redirect_to("login.php");
     } 
 }
+
+function get_scripture_id($book, $chapter, $verse) {
+    $query  = 'SELECT id FROM scripture ';
+    $query .= 'WHERE book = "' . $book . '" ';
+    $query .= 'AND chapter = "' . $chapter . '" ';
+    $query .= 'AND verse = "' . $verse . '" ';
+    $query .= 'LIMIT 1 ';
+            
+    $findSid = $db->prepare($query);
+    $findSid->execute();
+            
+    $s_id = $findSid->fetch();
+    return $s_id['id'];
+}
+
+function get_topic_id($name) {
+    $queri  = 'SELECT id FROM topics ';
+    $queri .= 'WHERE name = "' . $name . '" ';
+    $queri .= 'LIMIT 1 ';
+            
+    $findTid = $db->prepare($queri);
+    $findTid->execute();
+            
+    $t_id = $findTid->fetch();
+    return $t_id['id'];
+}
+
+function insert_topic_relation($tid, $sid) {
+    $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id) VALUES ('
+                    . '"' . $tid . '", '
+                    . '"' . $sid . '")');
+}
+
 ?>

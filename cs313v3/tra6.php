@@ -10,36 +10,23 @@
     }
     if (isset($_POST['newtopic'])) {
         $db->exec('INSERT INTO topics (name) values ("' . $_POST['newtopic'] . '")');
+        
+        $s_id = get_scripture_id($_POST['book'], $_POST['chapter'], $_POST['verse']);
+        
+        $t_id = get_topic_id($$_POST['newtopic']);
+        
+        insert_topic_relation($t_id, $s_id);
     }
     
     if (isset($_POST['topic'])){
         var_dump($_POST['topic']);
         foreach ($_POST['topic'] as $cipot){
-            $query  = 'SELECT id FROM scripture ';
-            $query .= 'WHERE book = "' . $_POST['book'] . '" ';
-            $query .= 'AND chapter = "' . $_POST['chapter'] . '" ';
-            $query .= 'AND verse = "' . $_POST['verse'] . '" ';
-            $query .= 'LIMIT 1 ';
             
-            $findSid = $db->prepare($query);
-            $findSid->execute();
+            $sid = get_scripture_id($_POST['book'], $_POST['chapter'], $_POST['verse']);
             
-            $s_id = $findSid->fetch();
-            var_dump($s_id);
-            
-            $queri  = 'SELECT id FROM topics ';
-            $queri .= 'WHERE name = "' . $cipot . '" ';
-            $queri .= 'LIMIT 1 ';
-            
-            $findTid = $db->prepare($queri);
-            $findTid->execute();
-            
-            $t_id = $findTid->fetch();
-            var_dump($t_id);
-            
-            $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id) VALUES ('
-                    . '"' . $t_id['id'] . '", '
-                    . '"' . $s_id['id'] . '")');
+            $tid = get_topic_id($cipot);
+           
+            insert_topic_relation($tid, $sid);
         }
         
     }
@@ -106,7 +93,7 @@
                                         . '<ul class="w3-ul">';
                                 foreach ($db->query('SELECT topic_id FROM scripture2topic WHERE scripture_id = "'.$row['id'].'"') as $tid) {
                                     foreach ($db->query('SELECT name FROM topics WHERE id = "'.$tid['topic_id'].'"') as $tpc) {
-                                    echo '<li>'.$tpc['name'].'</li>';
+                                    echo '<li class="w3-blockquote">'.$tpc['name'].'</li>';
                                     }
                                 }
                                 echo '</ul>';
