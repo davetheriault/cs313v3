@@ -120,12 +120,12 @@ if (isset($_POST['topic'])) {
                                 . $row['content'] . '"</li>';
                             }
                         } else {
-                            foreach ($db->query('SELECT id, book, chapter, verse, content FROM scripture') as $row) {
+                            foreach ($db->query('SELECT id, book, chapter, verse, content FROM scripture ORDER BY book') as $row) {
                                 echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <br/>"'
                                 . $row['content'] . '"'
                                 . '<ul class="w3-ul">';
                                 foreach ($db->query('SELECT topic_id FROM scripture2topic WHERE scripture_id = "' . $row['id'] . '"') as $tid) {
-                                    foreach ($db->query('SELECT name FROM topics WHERE id = "' . $tid['topic_id'] . '"') as $tpc) {
+                                    foreach ($db->query('SELECT name FROM topics WHERE id = "' . $tid['topic_id'] . '" ORDER BY name') as $tpc) {
                                         echo '<li class="w3-blockquote">' . $tpc['name'] . '</li>';
                                     }
                                 }
