@@ -86,7 +86,7 @@ if (isset($_POST['topic'])) {
                         <input type="number" class="w3-input" name="verse" required="required"/>
 
                         <label>Content:</label>
-                        <textarea rows="5" cols="70" name="content" class="w3-input" required="required"></textarea>
+                        <textarea rows="4" cols="70" name="content" class="w3-input" required="required"></textarea>
 
                         <label>Topics:</label>
                         <ul class="w3-ul">
@@ -99,7 +99,7 @@ if (isset($_POST['topic'])) {
                                 <input type="text" id="newtopic" name="newtopic" placeholder=" New Topic..." disabled=""/></li>
                         </ul>
                         <br/>
-                        <input type="submit" form="addScript" value="Add Scripture" class="w3-btn"/>
+                        <input type="submit" form="addScript" value="Add Scripture" class="w3-btn w3-green"/>
 
 
                     </form>
