@@ -13,9 +13,10 @@
         <div id="container">
             <header class="w3-container w3-blue w3-text-shadow">
                 <nav class="w3-topnav w3-xlarge">
-                        <a href="index.php"><i class="fa fa-home w3-xxlarge"></i> David Theriault</a>
-                        <a href="about.php">About</a>
-                        <a href="collection.php">Movie Collection App</a>
+                        <a href="index.php"><i class="fa fa-home w3-xxlarge"></i> Home</a> | 
+                        <a href="about.php">About</a> | 
+                        <a href="collection.php">Movie Collection App</a> | 
+                        <a href="tra6.php">Scripture Database</a> | 
                 </nav>
                 
             </header>
