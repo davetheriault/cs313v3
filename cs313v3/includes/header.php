@@ -6,7 +6,7 @@
         <link type="text/css" rel="stylesheet" href="css/w3.css" />
         <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
         <meta charset="UTF-8">
-        <script src="jquery-1.12.0.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
         <title><?php echo $title; ?></title>
     </head>
     <body>
