@@ -7,13 +7,36 @@
     if (isset($_POST['book'])){
         $db->exec('INSERT INTO scripture (book, chapter, verse, content)'
                 . 'VALUES ("'.$_POST['book'].'", "'.$_POST['chapter'].'", "'.$_POST['verse'].'", "'.$_POST['content'].'")');
-    
     }
     
     if (isset($_POST['topic'])){
         var_dump($_POST['topic']);
         foreach ($_POST['topic'] as $cipot){
-            echo $cipot.'<br>';
+            $query  = 'SELECT id FROM scripture ';
+            $query .= 'WHERE book = "' . $_POST['book'] . '" ';
+            $query .= 'AND chapter = "' . $_POST['chapter'] . '" ';
+            $query .= 'AND verse = "' . $_POST['verse'] . '" ';
+            $query .= 'LIMIT 1 ';
+            
+            $findSid = $db->prepare($query);
+            $findSid->execute();
+            
+            $s_id = $findSid->fetch();
+            var_dump($s_id);
+            
+            $queri  = 'SELECT id FROM topics ';
+            $queri .= 'WHERE name = "' . $cipot . '" ';
+            $queri .= 'LIMIT 1 ';
+            
+            $findTid = $db->prepare($queri);
+            $findTid->execute();
+            
+            $t_id = $findTid->fetch();
+            var_dump($t_id);
+            
+            $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id) VALUES ('
+                    . '"' . $t_id['id'] . '", '
+                    . '"' . $s_id['id'] . '")');
         }
         /*foreach ($db->query('SELECT id FROM scripture WHERE book = "'.$_POST['book'].'"'
                                 . 'AND chapter = "'.$_POST['chapter'].'"'
