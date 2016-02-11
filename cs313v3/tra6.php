@@ -21,13 +21,12 @@
     }
     
     if (isset($_POST['topic'])){
-        var_dump($_POST['topic']);
         foreach ($_POST['topic'] as $cipot){
             
             $sid = get_scripture_id($_POST['book'], $_POST['chapter'], $_POST['verse']);
-            
+            echo $sid;
             $tid = get_topic_id($cipot);
-           
+            echo '<br>'.$tid;
             $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id) VALUES ('
                     . '"' . $tid . '", '
                     . '"' . $sid . '")');
@@ -70,6 +69,7 @@
                             <li><input type="checkbox" name="other" id="other" /> 
                                 <input type="text" id="newtopic" name="newtopic" placeholder=" New Topic..." disabled=""/></li>
                         </ul>
+                        <br/>
                         <input type="submit" form="addScript" value="Add Scripture" class="w3-btn"/>
                         
                         
