@@ -15,7 +15,9 @@
         
         $t_id = get_topic_id($$_POST['newtopic']);
         
-        insert_topic_relation($t_id, $s_id);
+        $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id) VALUES ('
+                    . '"' . $t_id . '", '
+                    . '"' . $s_id . '")');
     }
     
     if (isset($_POST['topic'])){
@@ -26,7 +28,9 @@
             
             $tid = get_topic_id($cipot);
            
-            insert_topic_relation($tid, $sid);
+            $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id) VALUES ('
+                    . '"' . $tid . '", '
+                    . '"' . $sid . '")');
         }
         
     }

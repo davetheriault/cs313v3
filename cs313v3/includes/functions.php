@@ -124,10 +124,5 @@ function get_topic_id($name) {
     return $t_id['id'];
 }
 
-function insert_topic_relation($tid, $sid) {
-    $db->exec('INSERT INTO scripture2topic (topic_id, scripture_id) VALUES ('
-                    . '"' . $tid . '", '
-                    . '"' . $sid . '")');
-}
 
 ?>
