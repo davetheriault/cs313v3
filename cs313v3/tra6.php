@@ -72,15 +72,18 @@
                         <input type="number" class="w3-input" name="verse" required="required"/>
                         
                         <label>Content:</label>
-                        <textarea rows="9" cols="70" name="content" class="w3-input" required="required"></textarea>
+                        <textarea rows="5" cols="70" name="content" class="w3-input" required="required"></textarea>
                         
-                        <label>Topics:</label><br/>
+                        <label>Topics:</label>
+                        <ul class="w3-ul">
                         <?php 
                         foreach ($db->query('SELECT id, name FROM topics ORDER BY name ASC') as $topic) {
-                            echo '<input type="checkbox" name="topic[]" value="'.$topic['name'].'" />'.$topic['name'].'<br/>';
+                            echo '<li><input type="checkbox" name="topic[]" value="'.$topic['name'].'" /> '.$topic['name'].'</li>';
                         }
                         ?>
-                        
+                            <li><input type="checkbox" name="other" id="other" /> 
+                                <input type="text" id="newtopic" name="newtopic" placeholder="New Topic..." disabled=""/></li>
+                        </ul>
                         <input type="submit" form="addScript" value="Add Scripture" class="w3-btn"/>
                         
                         
@@ -124,3 +127,9 @@
 </main>
 
 <?php include 'includes/footer.php'; ?>
+
+<script>
+$('#other').change(function(){
+   $("#newtopic").prop("disabled", !$(this).is(':checked'));
+});
+</script>
