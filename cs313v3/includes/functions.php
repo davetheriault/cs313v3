@@ -7,7 +7,7 @@ function redirect_to($new_location) {
 
 function create_user($username, $password) {
     //hash password
-    $hashed_pw = password_hash($password, PASSWORD_DEFAULT);
+    $hashed_pw = crypt($password, CRYPT_BLOWFISH);
     
     $insert  = 'INSERT INTO user (username, password) ';
     $insert .= 'VALUES ("' . $username . '", "' . $hashed_pw . '") ';
@@ -21,7 +21,7 @@ function attempt_login($username, $pword) {
     //var_dump($password);
     
     //hash password
-    $password = password_hash($pword, PASSWORD_DEFAULT);
+    $password = crypt($pword, CRYPT_BLOWFISH);
 
     $find_user = find_user_by_username($username);
     $user = $find_user[0];
