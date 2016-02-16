@@ -30,6 +30,7 @@ if (isset($_POST['sign-in'])) {
   $error = 'Please provide valid login';
   }
   } */
+} 
     ?>
 <?php include 'includes/header.php'; ?>
 
