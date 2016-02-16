@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
 
                     <p><input class="w3-input" name="login" type="submit" value="Log In" form="userLogin"/> </p>
                     <a href="register.php">Sign Up</a>
-                    <br>
+                    <br/>&nbsp;
                 </form>
             </div>
         </div>
