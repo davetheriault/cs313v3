@@ -21,8 +21,7 @@ if (isset($_POST['sign-in'])) {
     if ($usr[0]['password'] == $pass2) {
         $_SESSION['logged-in'] = 'logged-in';
         $_SESSION['firstname'] = $user[0]['username'];
-        redirect_to('collection.php');
-        exit();
+        echo 'redirect here...';
     } else {
         $error = 'Please provide valid login';
     }
