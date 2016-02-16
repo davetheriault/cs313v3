@@ -10,6 +10,12 @@ if (isset($_POST['sign-in'])) {
 
 
     $pass2 = crypt($_POST['sign-in-password'], CRYPT_BLOWFISH);
+    
+    echo '<br>' . $pass2;
+    echo '<br>' . $usr[0]['password'];
+    echo '<br>';
+    var_dump($usr[0]);
+
 
     if ($usr[0]['password'] == $pass2) {
         $_SESSION['logged-in'] = 'logged-in';
