@@ -31,8 +31,9 @@ if (isset($_POST['sign-in'])) {
 
     if ($login == TRUE) {
         echo '<br>if login true started';
-        
-        echo 'redirect here...';
+        $_SESSION["id"] = "id";
+        $_SESSION["username"] = $_POST['sign-in-username'];
+        header('Location: collection.php');
     } else {
         $error = 'Please provide valid login';
     }
