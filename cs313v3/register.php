@@ -1,5 +1,5 @@
 <?php include 'includes/session.php'; ?>
-<?php // include 'password_compat/lib/password.php'; ?>
+<?php // include 'password_compat/lib/password.php';  ?>
 <?php require 'includes/dbConnect.php'; ?>
 <?php require 'includes/functions.php'; ?>
 
@@ -22,10 +22,14 @@ if (isset($_POST['signup'])) {
 
             $username = $_POST['user'];
             $password = $_POST['pass'];
-            create_user($username, $password);
+
+            $hashed_pw = crypt($password, CRYPT_BLOWFISH);
+
+            $db-exec('INSERT INTO user (username, password) VALUES ("' . $username . '", "' . $hashed_pw . '") ');
+
             $_SESSION['message'] = 'User created';
-            
-            
+
+
             $found_user = attempt_login($username, $password);
 
             if (isset($found_user) && $found_user != false) {
@@ -37,7 +41,7 @@ if (isset($_POST['signup'])) {
             } else {
                 //failed login
                 $_SESSION['message'] = 'Username / Password Do Not Match';
-            } 
+            }
         }
     }
 }
