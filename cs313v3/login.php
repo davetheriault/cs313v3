@@ -25,7 +25,7 @@ if (isset($_POST['login'])) {
 <?php $title = 'Login'; ?>
 <?php include 'includes/header.php'; ?>
 
-<?php echo message(); ?>
+<?php echo '<div class="w3-card-8">'.message().'</div>'; ?>
 
 <main class="w3-container">
     <div class="w3-row">

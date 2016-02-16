@@ -29,19 +29,8 @@ if (isset($_POST['signup'])) {
 
             $_SESSION['message'] = 'User created';
 
+            redirect_to('login.php');
 
-            $found_user = attempt_login($username, $password);
-
-            if (isset($found_user) && $found_user != false) {
-                //successful login
-                //echo '<br/>Redirect Login Success';
-                $_SESSION["user_id"] = $found_user["id"];
-                $_SESSION["username"] = $found_user["username"];
-                redirect_to('collection.php');
-            } else {
-                //failed login
-                $_SESSION['message'] = 'Username / Password Do Not Match';
-            }
         }
     }
 }
@@ -50,7 +39,7 @@ if (isset($_POST['signup'])) {
 <?php $title = 'Register'; ?>
 <?php include 'includes/header.php'; ?>
 
-<?php echo message(); ?>
+<?php echo '<div class="w3-card-8">'.message().'</div>'; ?>
 
 <main class="w3-container">
     <div class="w3-row">
