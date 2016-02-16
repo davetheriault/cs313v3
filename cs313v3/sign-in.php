@@ -17,9 +17,18 @@ if (isset($_POST['sign-in'])) {
     echo '<br>vardump';
     var_dump($usr[0]);
     var_dump($pass2);
+    
+    function attemptLog($pw1, $pw2) {
+        if ($pw1 === $pw2) {
+            return TRUE;
+        } else {
+            return NULL;
+        }
+    }
+    
+    $login = attemptLog($pass2, $usr[0]['password']);
 
-
-    if ($usr[0]['password'] == $pass2) {
+    if (isset($login) && $login != NULL) {
         $_SESSION['logged-in'] = 'logged-in';
         $_SESSION['firstname'] = $user[0]['username'];
         echo 'redirect here...';
