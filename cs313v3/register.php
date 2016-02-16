@@ -63,7 +63,8 @@ if (isset($_POST['signup'])) {
                         <input class="w3-input" type="password" name="pass2" required="required"/>
                     </p>
 
-                    <p><input class="w3-input" name="signup" type="submit" value="Sign Up" form="userSignup"/> </p><br>
+                    <p><input class="w3-input" name="signup" type="submit" value="Sign Up" form="userSignup"/> </p>
+                    Already registered? <a href="login.php">Log In</a><br/>&nbsp;
                 </form>
             </div>
         </div>
