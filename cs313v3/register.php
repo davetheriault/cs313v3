@@ -25,7 +25,7 @@ if (isset($_POST['signup'])) {
 
             $hashed_pw = crypt($password, CRYPT_BLOWFISH);
 
-            $db-exec('INSERT INTO user (username, password) VALUES ("' . $username . '", "' . $hashed_pw . '") ');
+            $db->exec('INSERT INTO user (username, password) VALUES ("' . $username . '", "' . $hashed_pw . '") ');
 
             $_SESSION['message'] = 'User created';
 
