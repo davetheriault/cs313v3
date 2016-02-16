@@ -25,7 +25,7 @@ if (isset($_POST['signup'])) {
             create_user($username, $password);
             $_SESSION['message'] = 'User created';
             
-            /*
+            
             $found_user = attempt_login($username, $password);
 
             if (isset($found_user) && $found_user != false) {
@@ -37,7 +37,7 @@ if (isset($_POST['signup'])) {
             } else {
                 //failed login
                 $_SESSION['message'] = 'Username / Password Do Not Match';
-            } */
+            } 
         }
     }
 }
