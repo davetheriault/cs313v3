@@ -19,6 +19,7 @@ if (isset($_POST['sign-in'])) {
     var_dump($pass2);
     
     function attemptLog($pw1, $pw2) {
+        echo '<br>AttemptLog Called';
         if ($pw1 === $pw2) {
             return TRUE;
         } else {
@@ -28,7 +29,8 @@ if (isset($_POST['sign-in'])) {
     
     $login = attemptLog($pass2, $usr[0]['password']);
 
-    if (isset($login) && $login != NULL) {
+    if ($login == TRUE) {
+        echo '<br>if login true started';
         $_SESSION['logged-in'] = 'logged-in';
         $_SESSION['firstname'] = $user[0]['username'];
         echo 'redirect here...';
