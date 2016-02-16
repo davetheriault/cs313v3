@@ -12,7 +12,8 @@ function create_user($username, $password) {
     $insert  = 'INSERT INTO user (username, password) ';
     $insert .= 'VALUES ("' . $username . '", "' . $hashed_pw . '") ';
     
-    $db->exec($insert);
+    $new = $db->prepare($insert);
+    $new->execute();
 }
 
 function attempt_login($username, $pword) {
