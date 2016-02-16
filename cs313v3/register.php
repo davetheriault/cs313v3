@@ -1,7 +1,8 @@
 <?php include 'includes/session.php'; ?>
 <?php // include 'password_compat/lib/password.php'; ?>
-<?php require 'includes/functions.php'; ?>
 <?php require 'includes/dbConnect.php'; ?>
+<?php require 'includes/functions.php'; ?>
+
 <?php
 $username = '';
 if (isset($_POST['signup'])) {
