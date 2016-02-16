@@ -136,7 +136,7 @@ if (isset($_POST['topic'])) {
                                 echo '<li><strong>' . $row['book'] . ' ' . $row['chapter'] . ':' . $row['verse'] . '</strong> <br/>"'
                                 . $row['content'] . '"'
                                 . '<ul class="w3-ul">';
-                                foreach ($db->query('SELECT topic_id FROM scripture2topic WHERE scripture_id = "' . $row['id'] . '"') as $tid) {
+                                foreach ($db->query('SELECT DISTINCT topic_id FROM scripture2topic WHERE scripture_id = "' . $row['id'] . '"') as $tid) {
                                     foreach ($db->query('SELECT name FROM topics WHERE id = "' . $tid['topic_id'] . '" ORDER BY name') as $tpc) {
                                         echo '<li class="w3-blockquote">' . $tpc['name'] . '</li>';
                                     }

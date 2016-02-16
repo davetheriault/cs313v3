@@ -5,10 +5,23 @@ function redirect_to($new_location) {
     exit;
 }
 
-function attempt_login($username, $password) {
+function create_user($username, $password) {
+    //hash password
+    $hashed_pw = password_hash($password, PASSWORD_DEFAULT);
+    
+    $insert  = 'INSERT INTO user (username, password) ';
+    $insert .= 'VALUES ("' . $username . '", "' . $hashed_pw . '") ';
+    
+    $db->exec($insert);
+}
+
+function attempt_login($username, $pword) {
 
     //echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
     //var_dump($password);
+    
+    //hash password
+    $password = password_hash($pword, PASSWORD_DEFAULT);
 
     $find_user = find_user_by_username($username);
     $user = $find_user[0];
