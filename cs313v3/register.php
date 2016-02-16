@@ -1,5 +1,5 @@
 <?php include 'includes/session.php'; ?>
-<?php //include 'includes/password.php'; ?>
+<?php // include 'password_compat/lib/password.php'; ?>
 <?php require 'includes/functions.php'; ?>
 <?php require 'includes/dbConnect.php'; ?>
 <?php
