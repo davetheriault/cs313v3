@@ -6,7 +6,8 @@ if (isset($_POST['sign-in'])) {
     $query = 'SELECT * FROM user WHERE username = "' . $_POST['sign-in-username'] . '"';
     $user = $db->prepare($query);
     $user->execute();
-    $usr = $user->fetch();
+    $user->setFetchMode(PDO::FETCH_ASSOC);
+    $usr = $user->fetchAll();
 
 
     $pass2 = crypt($_POST['sign-in-password'], CRYPT_BLOWFISH);
