@@ -16,6 +16,7 @@ if (isset($_POST['sign-in'])) {
     echo '<br>$usr[0]["password"] = ' . $usr[0]['password'];
     echo '<br>vardump';
     var_dump($usr[0]);
+    var_dump($pass2);
 
 
     if ($usr[0]['password'] == $pass2) {
