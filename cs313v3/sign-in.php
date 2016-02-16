@@ -31,8 +31,7 @@ if (isset($_POST['sign-in'])) {
 
     if ($login == TRUE) {
         echo '<br>if login true started';
-        $_SESSION['logged-in'] = 'logged-in';
-        $_SESSION['firstname'] = $user[0]['username'];
+        
         echo 'redirect here...';
     } else {
         $error = 'Please provide valid login';
