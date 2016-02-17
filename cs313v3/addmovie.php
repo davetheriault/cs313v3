@@ -10,19 +10,24 @@
 
             <div class="w3-padding" style="font-family: monospace;">
                 <form id="addmovie" method="post" action="addmovie.php" class="w3-form" >
-                    <label for="title">Movie Title:</label>
+                    
                     <input class="w3-input" name="title" id="title" type="text" />
-                    <label for="mpaa">Rating:</label>
+                    <label for="title">Movie Title:</label>
+                    
                     <select class="w3-select" name="mpaa" id="mpaa">
+                        <option disabled="disabled" selected>Select an option...</option>
                         <option value="G">G <img src="images/G.jpg" /></option>
                         <option value="PG">PG <img src="images/PG.jpg" /></option>
                         <option value="PG-13">PG-13 <img src="images/PG-13.jpg" /></option>
                         <option value="R">R <img src="images/R.jpg" /></option>
                     </select>
-                    <label for="runtime">Runtime:</label>
+                    <label for="mpaa">Rating:</label>
+                    
                     <input class="w3-input" type="time" name="runtime" id="runtime" />
-                    <label for="year">Release Year:</label>
+                    <label for="runtime">Runtime:</label>
+                    
                     <input class="w3-input" type="text" name="year" id="year" />
+                    <label for="year">Release Year:</label>
                 </form>
             </div>
         </div>
