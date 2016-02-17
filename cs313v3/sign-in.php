@@ -31,7 +31,7 @@ if (isset($_POST['sign-in'])) {
 
     if ($login == TRUE) {
         echo '<br>if login true started';
-        $_SESSION["id"] = "id";
+        $_SESSION["user_id"] = "id";
         $_SESSION["username"] = $_POST['sign-in-username'];
         header('Location: collection.php');
     } else {
