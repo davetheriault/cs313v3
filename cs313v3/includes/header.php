@@ -20,4 +20,4 @@
                 </nav>
 
             </header>
-            <?php message(); ?>
+            <?php echo message(); ?>
