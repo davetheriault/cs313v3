@@ -45,8 +45,9 @@
                 <div class="w3-col s12 m5 l5">
                     <div class="w3-padding">
                         <ul class="w3-ul"><li>
-                                <select class="w3-select" name="genre[]" id="mpaa" required multiple style="height: 300px;" >
-                                    <option disabled="disabled" selected>Ctrl+click to select multiple genres...</option>
+                                <label for="genre">Genre(s):</label>
+                                <select class="w3-select" name="genre[]" id="genre" required multiple style="height: 270px;" >
+                                    <option disabled="disabled">Ctrl+click to select multiple genres...</option>
                                     <?php
                                     foreach ($db->query('SELECT name FROM genre') as $gnre) {
                                         echo '<option value="' . $gnre['name'] . '">' . $gnre['name'] . '</option>';
