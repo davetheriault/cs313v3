@@ -5,15 +5,16 @@
 <?php include 'includes/header.php'; ?>
 
 <main class="w3-row">
-    <div class="w3col s0 m1 l2">&nbsp;</div>
+    <div class="w3-col s0 m1 l2">&nbsp;</div>
     <div class="w3-col s12 m10 l8">
-        <div class="w3-card-4 w3-white w3-padding-0 w3-margin">
+        <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
 
             <h3 class="w3-red w3-padding w3-margin-0">Add Movie</h3>
 
-            <div class="w3-padding">
-                <form id="addmovie" method="post" action="addmovieconfirm.php" class="w3-form" >
-                    <div class="w3-col s8 m8 l8">
+
+            <form id="addmovie" method="post" action="addmovieconfirm.php" class="w3-form" >
+                <div class="w3-col s12 m7 l7">
+                    <div class="w3-padding">
                         <ul class="w3-ul">
                             <li>
                                 <label for="title">Movie Title:</label>
@@ -37,27 +38,33 @@
                                 <label for="year">Release Year:</label>
                                 <input class="w3-input" type="text" name="year" id="year" required />
                             </li>
-                            <li>
-                                <input class="w3-btn w3-padding w3-green" type="submit" value="+Add Movie" form="addmovie" name="addsubmit"/>
-                            </li>
+
                         </ul>
                     </div>
-                    <div class="w3-col s4 m4 l4">
-                        <div class="w3-padding">
-                            <select class="w3-select" name="genre[]" id="mpaa" required multiple style="height: 400px;" >
-                                <option disabled="disabled" selected>Ctrl+click to select multiple genres...</option>
-                                <?php
-                                foreach ($db->query('SELECT name FROM genre') as $gnre) {
-                                    echo '<option value="' . $gnre['name'] . '">' . $gnre['name'] . '</option>';
-                                }
-                                ?>
-                            </select>
-                        </div>
+                </div>
+                <div class="w3-col s12 m5 l5">
+                    <div class="w3-padding">
+                        <ul class="w3-ul"><li>
+                                <select class="w3-select" name="genre[]" id="mpaa" required multiple style="height: 300px;" >
+                                    <option disabled="disabled" selected>Ctrl+click to select multiple genres...</option>
+                                    <?php
+                                    foreach ($db->query('SELECT name FROM genre') as $gnre) {
+                                        echo '<option value="' . $gnre['name'] . '">' . $gnre['name'] . '</option>';
+                                    }
+                                    ?>
+                                </select></li>
+                        </ul>
                     </div>
+                </div>
+                <ul class="w3-ul">
+                    <li>
+                        <input class="w3-btn w3-padding w3-green" type="submit" value="+Add Movie" form="addmovie" name="addsubmit"/>
+                    </li>
+                </ul>
 
-                   
-                </form>
-            </div>
+
+            </form>
+
         </div>
     </div>
 
