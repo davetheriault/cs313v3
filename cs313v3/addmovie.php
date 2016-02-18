@@ -38,7 +38,7 @@
                                 <option disabled="disabled" selected>Ctrl+click to select multiple genres...</option>
                                 <?php
                                 foreach ($db->query('SELECT name FROM genre') as $gnre) {
-                                    echo '<option value="' . $gnre . '">' . $gnre . '</option>';
+                                    echo '<option value="' . $gnre['name'] . '">' . $gnre['name'] . '</option>';
                                 }
                                 ?>
                             </select>
