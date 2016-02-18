@@ -36,12 +36,7 @@
                         <li>
                             <select class="w3-select" name="genre[]" id="mpaa" required multiple >
                                 <option disabled="disabled" selected>Ctrl+click to select multiple genres...</option>
-                                <?php
                                 
-                                foreach ($db->query('SELECT name FROM genre;') as $gnre) {
-                                    echo '<option value="' . $gnre['name'] . '">' . $gnre['name'] . '</option>';
-                                }
-                                ?>
                             </select>
                         </li>
                         <li>
