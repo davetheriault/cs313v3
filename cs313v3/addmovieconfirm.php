@@ -32,14 +32,14 @@ if (isset($_POST['addsubmit'])) {
     $m_id = $db->query('SELECT id FROM movie WHERE title = "' . $movtitle . '" LIMIT 1');
     $m_id->setFetchMode(PDO::FETCH_ASSOC);
     $moid = $m_id->fetchAll();
-    $mid = $moid['id'];         echo '<br><br>query movie id: '.$mid;
+    $mid = $moid['id'];         echo '<br><br>query movie id: '.$moid['id'];
 
     if (isset($_POST['genre'])) {       echo '<br><br>isset post[genre]';
         foreach ($_POST['genre'] as $erneg) {
             $g_id = $db->query('SELECT id FROM genre WHERE name = "' . $erneg . '" LIMIT 1');
             $g_id->setFetchMode(PDO::FETCH_ASSOC);
             $goid = $g_id->fetchAll();
-            $gid = $goid['id'];         echo '<br><br>query genre id: '.$gid;
+            $gid = $goid['id'];         echo '<br><br>query genre id: '.$goid['id'];
 
             $check = $db->query('SELECT * FROM genre2movie WHERE genre_id = "' . $gid . '" AND movie_id = "' . $mid . '"');
             $checkG2M = $check->fetchAll(PDO::FETCH_ASSOC);            echo '<br';            var_dump($checkG2M);
