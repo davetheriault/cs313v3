@@ -4,10 +4,10 @@
 <?php $title = 'Add Movie'; ?>
 <?php include 'includes/header.php'; ?>
 
-<main class="w3-container">
+<main class="w3-row">
     <div class="w3col s0 m1 l2">&nbsp;</div>
     <div class="w3-col s12 m10 l8">
-        <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
+        <div class="w3-card-4 w3-white w3-padding-0 w3-margin">
 
             <h3 class="w3-red w3-padding w3-margin-0">Add Movie</h3>
 
@@ -43,19 +43,19 @@
                         </ul>
                     </div>
                     <div class="w3-col s4 m4 l4">
-
-                        <select class="w3-select" name="genre[]" id="mpaa" required multiple style="height: 400px;" >
-                            <option disabled="disabled" selected>Ctrl+click to select multiple genres...</option>
-                            <?php
-                            foreach ($db->query('SELECT name FROM genre') as $gnre) {
-                                echo '<option value="' . $gnre['name'] . '">' . $gnre['name'] . '</option>';
-                            }
-                            ?>
-                        </select>
-
+                        <div class="w3-padding">
+                            <select class="w3-select" name="genre[]" id="mpaa" required multiple style="height: 400px;" >
+                                <option disabled="disabled" selected>Ctrl+click to select multiple genres...</option>
+                                <?php
+                                foreach ($db->query('SELECT name FROM genre') as $gnre) {
+                                    echo '<option value="' . $gnre['name'] . '">' . $gnre['name'] . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
                     </div>
 
-                    </ul>
+                   
                 </form>
             </div>
         </div>
