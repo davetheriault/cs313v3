@@ -9,25 +9,34 @@
             <h3 class="w3-red w3-padding w3-margin-0">Add Movie</h3>
 
             <div class="w3-padding">
-                <form id="addmovie" method="post" action="addmovie.php" class="w3-form" >
-                    
-                    <label for="title">Movie Title:</label>
-                    <input class="w3-input" name="title" id="title" type="text" />
-                    
-                    <label for="mpaa">Rating:</label>
-                    <select class="w3-select" name="mpaa" id="mpaa">
-                        <option disabled="disabled" selected>Select an option...</option>
-                        <option value="G">G <img src="images/G.jpg" /></option>
-                        <option value="PG">PG <img src="images/PG.jpg" /></option>
-                        <option value="PG-13">PG-13 <img src="images/PG-13.jpg" /></option>
-                        <option value="R">R <img src="images/R.jpg" /></option>
-                    </select>
-                    
-                    <label for="runtime">Runtime:</label>
-                    <input class="w3-input" type="time" name="runtime" id="runtime" />
-                    
-                    <label for="year">Release Year:</label>
-                    <input class="w3-input" type="text" name="year" id="year" />
+                <form id="addmovie" method="post" action="addmovieconfirm.php" class="w3-form" >
+                    <ul class="w3-ul">
+                        <li>
+                        <label for="title">Movie Title:</label>
+                        <input class="w3-input" name="title" id="title" type="text" />
+                        </li>
+                        <li>
+                        <label for="mpaa">Rating:</label>
+                        <select class="w3-select" name="mpaa" id="mpaa">
+                            <option disabled="disabled" selected>Select an option...</option>
+                            <option value="G">G <img src="images/G.jpg" /></option>
+                            <option value="PG">PG <img src="images/PG.jpg" /></option>
+                            <option value="PG-13">PG-13 <img src="images/PG-13.jpg" /></option>
+                            <option value="R">R <img src="images/R.jpg" /></option>
+                        </select>
+                        </li>
+                        <li>
+                        <label for="runtime">Runtime:</label>
+                        <input class="w3-input" type="time" name="runtime" id="runtime" />
+                        </li>
+                        <li>
+                        <label for="year">Release Year:</label>
+                        <input class="w3-input" type="text" name="year" id="year" />
+                        </li>
+                        <li>
+                            <input class="w3-btn" type="submit" value="+Add Movie" form="addmovie" name="addsubmit"/>
+                        </li>
+                    </ul>
                 </form>
             </div>
         </div>
