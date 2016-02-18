@@ -11,7 +11,7 @@ if (isset($_POST['addsubmit'])) {
         redirect_to('addmovie.php');
         exit;
     }
-    if (!preg_match('/^(19)/', $_POST['year']) || !preg_match('/^(20)/', $_POST['year'])) {
+    if (!preg_match('/^19/', $_POST['year']) && !preg_match('/^20/', $_POST['year'])) {
         $_SESSION['message'] = 'Invalid Release Year';
         redirect_to('addmovie.php');
         exit;

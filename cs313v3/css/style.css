@@ -115,6 +115,12 @@ select{
         width: 100%;
     }
     
+    .message:before {
+        content: ' ';
+        position: relative;
+        display: block;
+    }
+    
     .mngmnt a {
         text-decoration: none;
         font-size: 1.3em;
