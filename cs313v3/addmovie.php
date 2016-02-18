@@ -13,6 +13,7 @@
 
             <div class="w3-padding">
                 <form id="addmovie" method="post" action="addmovieconfirm.php" class="w3-form" >
+                    <div class="w3-col s8 m8 l8">
                     <ul class="w3-ul">
                         <li>
                             <label for="title">Movie Title:</label>
@@ -36,8 +37,10 @@
                             <label for="year">Release Year:</label>
                             <input class="w3-input" type="text" name="year" id="year" required />
                         </li>
+                    </div>
+                    <div class="w3-col s4 m4 l4">
                         <li>
-                            <select class="w3-select" name="genre[]" id="mpaa" required multiple >
+                            <select class="w3-select" name="genre[]" id="mpaa" required multiple style="height: 500px;" >
                                 <option disabled="disabled" selected>Ctrl+click to select multiple genres...</option>
                                 <?php
                                 foreach ($db->query('SELECT name FROM genre') as $gnre) {
@@ -46,6 +49,7 @@
                                 ?>
                             </select>
                         </li>
+                    </div>
                         <li>
                             <input class="w3-btn w3-padding w3-green" type="submit" value="+Add Movie" form="addmovie" name="addsubmit"/>
                         </li>
