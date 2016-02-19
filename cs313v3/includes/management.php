@@ -2,7 +2,6 @@
 
 <?php
     echo ''
-       . '<div class="w3-col s4 m4 l4">'
        . '<div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">'
        .    '<h3 class="w3-red w3-padding w3-margin-0">'
        .         'My Movies'
@@ -41,5 +40,4 @@
        . '<a href="logout.php"><i class="fa fa-sign-out"></i> Log Out</a></li>'     
        . '</ul>'
        . '</div>'
-       . '</div>' 
        . '</div>';

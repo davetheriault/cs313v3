@@ -17,7 +17,7 @@ if (isset($_POST['signup'])) {
     } else {
 
         if ($_POST['pass'] != $_POST['pass2']) {
-            $_SESSION['message'] = 'Passwords not match.';
+            $_SESSION['message'] = 'Passwords do not match.';
         } else {
 
             $username = $_POST['user'];

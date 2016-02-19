@@ -1,7 +1,7 @@
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/dbConnect.php'; ?>
 <?php include 'includes/functions.php'; ?>
-<?php //var_dump($_SESSION);    ?>
+<?php //var_dump($_SESSION);     ?>
 <?php confirm_logged_in(); ?>
 
 
@@ -20,22 +20,23 @@
 
                     <form class="w3-form" id="movieSearch" action="find.php" method="get">
                         <div class="w3-row">
-                        <input class="w3-col s10 m10 l10 w3-input w3-btn w3-light-grey" type="text" placeholder="Search Movie Titles..." name="find"/>
-                        <button class="w3-col s2 m2 l2 w3-input w3-btn w3-grey" type="submit" form="movieSearch">Find</button>   
+                            <input class="w3-col s10 m10 l10 w3-input w3-btn w3-light-grey" type="text" placeholder="Search Movie Titles..." name="find"/>
+                            <button class="w3-col s2 m2 l2 w3-input w3-btn w3-grey" type="submit" form="movieSearch">Find</button>   
                         </div>
                     </form>
                 </div>
-                <?php  
+                <?php
                 if (isset($_GET['find'])) {
                     include 'includes/results.php';
                 }
-                
                 ?>
             </div>
         </div>
-        <?php include 'includes/management.php'; ?>
+        <div class="w3-col s4 m4 l4">
+            <?php require 'includes/management.php'; ?>
+        </div>        
         <div class="w3-col s8 m8 l8">
-            
+
         </div>
     </div>
 
