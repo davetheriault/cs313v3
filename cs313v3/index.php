@@ -34,7 +34,7 @@
                 <li><a href="per3survey.php">Week 3 - Survey</a></li>
                 <li><a href="per4.php">Week 4 - DB Set Up</a></li>
                 <li><a href="login.php">Week 5 - DB Access</a></li>
-                <li><a href="#">Week 6</a></li>
+                <li><a href="addmovie.php">Week 6 - DB Modification</a></li>
                 <li><a href="#">Week 7</a></li>
                 <li><a href="#">Week 8</a></li>
                 <li><a href="#">Week 9</a></li>
