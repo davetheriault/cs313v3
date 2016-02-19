@@ -51,7 +51,17 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
         }
     }
     if (isset($_SESSION['user_id'])) {         // echo '<br><br>isset session[user_id]';
-        $db->exec('INSERT INTO movie2user (user_id, movie_id) VALUES ("'.$_SESSION['user_id'].'", "'.$mid.'")');
+        
+        $exists = NULL;
+        $query = 'SELECT user_id FROM movie2user WHERE movie_id = "'.$mid.'"';
+        foreach ($db->query($query) as $row) {
+            if ($row['user_id'] == $_SESSION['user_id']){
+                $exists = TRUE;
+            } 
+        }
+        if ($exists != TRUE) {
+            $db->exec('INSERT INTO movie2user (user_id, movie_id) VALUES ("'.$_SESSION['user_id'].'", "'.$mid.'")');
+        }
     }
 }
 
