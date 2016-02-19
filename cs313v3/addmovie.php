@@ -70,12 +70,14 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="w3-col s4 m4 l4">
             <?php require 'includes/management.php'; ?>
-            <div class="w3-container w3-card-4 w3-white w3-padding w3-margin">
-                <p><i class="fa-plus"></i> Add From Database</p>
-            </div>
+            <a href="find.php">
+                <div class="w3-container w3-card-4 w3-white w3-padding w3-margin">
+                    <h3><i class="fa fa-plus"></i> Add From Database</h3>
+                </div>
+            </a>
         </div>
     </div>
 
