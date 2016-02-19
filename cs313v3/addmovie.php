@@ -1,6 +1,6 @@
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/dbConnect.php'; ?>
-
+<?php confirm_logged_in(); ?>
 <?php $title = 'Add Movie'; ?>
 <?php include 'includes/header.php'; ?>
 
