@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require 'includes/session.php'; ?>
 <?php require_once 'includes/functions.php'; ?>
 <?php
 	//logout

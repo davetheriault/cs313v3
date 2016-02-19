@@ -1,3 +1,5 @@
+<?php require 'includes/session.php'; ?>
+
 <?php $title = 'Conference DB Tables'; ?>
 <?php include 'includes/header.php'; ?>
 

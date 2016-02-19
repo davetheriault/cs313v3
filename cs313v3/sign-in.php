@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require 'includes/session.php'; ?>
 <?php include 'includes/dbConnect.php'; ?>
 <?php
 $error = '';

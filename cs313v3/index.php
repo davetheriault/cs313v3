@@ -1,4 +1,5 @@
-<?php session_start(); ?>
+<?php require 'includes/session.php'; ?>
+
 <?php $title = 'HomePage'; ?>
 
 <?php if (isset($_POST['endo'])) { session_destroy(); } ?>

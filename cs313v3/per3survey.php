@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require 'includes/session.php'; ?>
 
 <?php if ($_SESSION['voted'] == 'voted') {
      header('Location: http://dave-geekowtlowd.rhcloud.com/cs313v3/per3results.php ');    

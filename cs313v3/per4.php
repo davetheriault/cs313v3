@@ -1,3 +1,5 @@
+<?php require 'includes/session.php'; ?>
+
 <?php $title = 'Movie DB Tables'; ?>
 <?php include 'includes/header.php'; ?>
 

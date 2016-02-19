@@ -1,3 +1,5 @@
+<?php require 'includes/session.php'; ?>
+
 <?php $title = 'About'; ?>
 <?php include 'includes/header.php'; ?>
 

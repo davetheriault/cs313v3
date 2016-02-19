@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require 'includes/session.php'; ?>
 
 <?php $_SESSION['voted'] = 'voted'; ?>
 

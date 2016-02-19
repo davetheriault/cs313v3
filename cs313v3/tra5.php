@@ -1,3 +1,4 @@
+<?php require 'includes/session.php'; ?>
 <?php require 'includes/dbConnect.php'; ?>
 
 <?php $title = 'Scripture DB Access' ?>
