@@ -1,9 +1,7 @@
 <?php session_start(); ?>
 <?php $title = 'HomePage'; ?>
 
-<?php if (isset($_POST['endo'])) {
-     session_destroy();
-} ?>
+<?php if (isset($_POST['endo'])) { session_destroy(); } ?>
 
 <?php include 'includes/header.php'; ?>
 

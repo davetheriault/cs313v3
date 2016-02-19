@@ -19,6 +19,8 @@
                             <li>Etc.</li>
                         </ul>
                     </li>
+                    <li>I have a laptop</li>
+                    <li>I like to eat poutine</li>
                 </ul>
             </div>
         </div>
