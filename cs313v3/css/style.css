@@ -115,10 +115,10 @@ select{
         width: 100%;
     }
     
-    .message:before {
-        content: ' ';
+    .msg {
         position: relative;
         display: block;
+        width: 100%;
     }
     
     .mngmnt a {
