@@ -73,8 +73,8 @@
 
         <div class="w3-col s4 m4 l4">
             <?php require 'includes/management.php'; ?>
-            <a href="find.php">
-                <div class="w3-container w3-card-4 w3-white w3-padding w3-margin">
+            <a href="find.php" style="text-decoration: none;">
+                <div class="w3-container w3-card-4 w3-teal w3-padding w3-margin" style="border-radius: 10px;">
                     <h3><i class="fa fa-plus"></i> Add From Database</h3>
                 </div>
             </a>
