@@ -1,7 +1,7 @@
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/dbConnect.php'; ?>
 <?php include 'includes/functions.php'; ?>
-<?php //var_dump($_SESSION);    ?>
+<?php //var_dump($_SESSION);     ?>
 <?php confirm_logged_in(); ?>
 
 
@@ -20,16 +20,24 @@
                         <?php
                         foreach (($db->query('SELECT movie_id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '"')) as $movie) {
                             foreach (($db->query('SELECT * FROM movie WHERE id = "' . $movie['movie_id'] . '" ORDER BY title ASC')) as $info) {
-                                echo '<li><h4><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></h4><ul class="w3-ul"><li>MPAA Rating: ' . $info['mpaa'] . '</li>'
-                                . '<li>Runtime: ' . $info['runtime'] . '</li>'
-                                . '<li>Released: ' . $info['release_year'] . '</li>'
-                                . '<li>Genre(s): ';
-                                foreach (($db->query('SELECT genre_id FROM genre2movie WHERE movie_id = "' . $info['id'] . '"')) as $genres) {
-                                    foreach (($db->query('SELECT name FROM genre WHERE id = "' . $genres['genre_id'] . '"')) as $genre) {
-                                        echo '<a href="genre.php?genre=' . htmlentities($genre['name']) . '">' . $genre['name'] . '</a> ';
-                                    }
-                                }
-                                echo '</li></ul></li>';
+                                echo '<li>'
+                                . '<div class="w3-half"><strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong></div>'
+                                . '<div class="w3-quarter"><img src="../cs313v3/images/' . $info['mpaa'] . '.jpg" alt="' . $info['mpaa'] . '"/></div>'
+                                . '<div class="w3-quarter">(' . $info['release_year'] . ')</div>'
+                                . '</li>';
+
+
+                                /*  echo '<li><h4><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></h4>'
+                                  . '<ul class="w3-ul"><li>MPAA Rating: ' . $info['mpaa'] . '</li>'
+                                  . '<li>Runtime: ' . $info['runtime'] . '</li>'
+                                  . '<li>Released: ' . $info['release_year'] . '</li>'
+                                  . '<li>Genre(s): ';
+                                  foreach (($db->query('SELECT genre_id FROM genre2movie WHERE movie_id = "' . $info['id'] . '"')) as $genres) {
+                                  foreach (($db->query('SELECT name FROM genre WHERE id = "' . $genres['genre_id'] . '"')) as $genre) {
+                                  echo '<a href="genre.php?genre=' . htmlentities($genre['name']) . '">' . $genre['name'] . '</a> ';
+                                  }
+                                  }
+                                  echo '</li></ul></li>'; */
                             }
                         }
                         ?>
