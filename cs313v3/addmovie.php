@@ -12,7 +12,6 @@
             <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
                 <h3 class="w3-red w3-padding w3-margin-0">Add Movie</h3>
                 <div class="w3-container w3-padding">
-\
 
                     <form id="addmovie" method="post" action="addmovieconfirm.php" class="w3-form" >
                         <div class="w3-col s12 m7 l7">
