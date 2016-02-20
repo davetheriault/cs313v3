@@ -19,10 +19,10 @@
                 </h3>
                 <div class="w3-container w3-padding">
 
-                    <form class="w3-form" id="movieSearch" onsubmit="search(); return false;">
+                    <form class="w3-form" id="movieSearch">
                         <div class="w3-row">
                             <input class="w3-col s10 m10 l10 w3-input w3-btn w3-light-grey" type="text" placeholder="Search Movie Titles..." name="find"/>
-                            <button class="w3-col s2 m2 l2 w3-input w3-btn w3-grey" type="submit" form="movieSearch">Find</button>   
+                            <button class="w3-col s2 m2 l2 w3-input w3-btn w3-grey" onclick="search()">Find</button>   
                         </div>
                     </form>
                 </div>

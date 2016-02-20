@@ -24,6 +24,7 @@
     function search() {
         var noadd;
         var find = document.getElementsByName('find').value;
+        window.alert(find);
         showResults(find, noadd);
     }
 
