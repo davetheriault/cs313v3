@@ -27,7 +27,7 @@
     
     function search() {
         var noadd;
-        var find = document.getElementsByName('find').value;
+        var find = document.getElementById('find').value;
         if (find == undefined) {
             find = '';
         }
