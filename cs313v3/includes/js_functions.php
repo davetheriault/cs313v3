@@ -20,5 +20,11 @@
         }
         xmlhttp.send();
     }
+    
+    function search() {
+        var noadd;
+        var find = document.getElementsByName('find').value;
+        showResults(find, noadd);
+    }
 
 </script>
