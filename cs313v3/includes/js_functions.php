@@ -20,9 +20,9 @@
         };
         if (add === undefined) {
             window.alert('add undefined')
-            xmlhttp.open("GET", "results.php?find=" + str, true);
+            xmlhttp.open("GET", "includes/results.php?find=" + str, true);
         } else {
-            xmlhttp.open("GET", "results.php?find=" + str + "&add=" + add, true);
+            xmlhttp.open("GET", "includes/results.php?find=" + str + "&add=" + add, true);
         }
         xmlhttp.send();
     }
