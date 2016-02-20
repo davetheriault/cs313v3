@@ -11,6 +11,8 @@
         }
         xmlhttp.onreadystatechange = function () {
             window.alert('onReadyStateChange called');
+                document.getElementById("results").innerHTML = xmlhttp.responseText;
+            
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 window.alert('ready state 4 status 200');
                 document.getElementById("results").innerHTML = xmlhttp.responseText;
