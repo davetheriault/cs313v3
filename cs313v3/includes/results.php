@@ -1,7 +1,7 @@
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/dbConnect.php'; ?>
 <?php include 'includes/functions.php'; ?>
-<?php confirm_logged_in(); ?>
+
 
 <?php
 if (isset($_GET['add']) && $_GET['add'] != '') {
