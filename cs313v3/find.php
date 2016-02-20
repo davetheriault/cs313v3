@@ -6,6 +6,7 @@
 
 
 <?php $title = 'Find Movies'; ?>
+<?php include 'includes/js_functions.php'; ?>
 <?php include 'includes/header.php'; ?>
 
 <main class="w3-container">
@@ -25,11 +26,8 @@
                         </div>
                     </form>
                 </div>
-                <?php
-                if (isset($_GET['find'])) {
-                    include 'includes/results.php';
-                }
-                ?>
+                <?php // if (isset($_GET['find'])) { include 'includes/results.php'; } ?>
+                <div id="results"></div>
             </div>
         </div>
         <div class="w3-col s4 m4 l4">

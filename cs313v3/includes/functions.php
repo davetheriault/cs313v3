@@ -8,10 +8,10 @@ function redirect_to($new_location) {
 function create_user($username, $password) {
     //hash password
     $hashed_pw = crypt($password, CRYPT_BLOWFISH);
-    
-    $insert  = 'INSERT INTO user (username, password) ';
+
+    $insert = 'INSERT INTO user (username, password) ';
     $insert .= 'VALUES ("' . $username . '", "' . $hashed_pw . '") ';
-    
+
     $new = $db->prepare($insert);
     $new->execute();
 }
@@ -20,7 +20,6 @@ function attempt_login($username, $pword) {
 
     //echo 'attempt_login ' . $password . ' — ' . $username . '<br/>';
     //var_dump($password);
-    
     //hash password
     $password = crypt($pword, CRYPT_BLOWFISH);
 
@@ -109,34 +108,54 @@ function confirm_logged_in() {
     $logged = logged_in();
     if ($logged == FALSE) {
         redirect_to("login.php");
-    } 
+    }
 }
 
 function get_scripture_id($book, $chapter, $verse) {
-    $query  = 'SELECT id FROM scripture ';
+    $query = 'SELECT id FROM scripture ';
     $query .= 'WHERE book = "' . $book . '" ';
     $query .= 'AND chapter = "' . $chapter . '" ';
     $query .= 'AND verse = "' . $verse . '" ';
     $query .= 'LIMIT 1 ';
-            
+
     $findSid = $db->prepare($query);
     $findSid->execute();
-            
+
     $s_id = $findSid->fetch();
     return $s_id['id'];
 }
 
 function get_topic_id($name) {
-    $queri  = 'SELECT id FROM topics ';
+    $queri = 'SELECT id FROM topics ';
     $queri .= 'WHERE name = "' . $name . '" ';
     $queri .= 'LIMIT 1 ';
-            
+
     $findTid = $db->prepare($queri);
     $findTid->execute();
-            
+
     $t_id = $findTid->fetch();
     return $t_id['id'];
 }
 
+function check_ownership($userid, $movieid) {
+    $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
+    foreach ($db->query($query) as $row) {
+        if ($row['user_id'] == $userid) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+}
 
+function insert_movie2user($userid, $movieid) {
+
+    $exists = check_ownership($userid, $movieid);
+
+    if ($exists != TRUE) {
+        $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $userid . '", "' . $movieid . '")');
+        $addM->execute();
+    }
+}
 ?>
+
