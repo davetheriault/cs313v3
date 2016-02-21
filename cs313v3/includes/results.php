@@ -27,9 +27,9 @@ echo '<div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">'
 
 foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars($_GET['find']) . '%" ORDER BY title') as $info) {
     $owns = FALSE;
-    $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
+    $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . $info['id'] . '"';
     foreach ($db->query($query) as $row) {
-        if ($row['user_id'] == $userid) {
+        if ($row['user_id'] == $_SESSION['user_id']) {
             $owns = TRUE;
         }
     }
@@ -41,7 +41,7 @@ foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars
         echo '<div style="float: right;"><i style="color: lightgray;" class="fa fa-check"></i></div>';
     } else {
         echo '<div style="float: right;">'
-        . '<button onclick="showResults(' . $_GET['find'] . ', ' . $info['id'] . ')" class="w3-red"><i class="fa fa-plus"></i></button>'
+        . '<button onclick="showResults(' . $_GET['find'] . ', ' . $info['id'] . ')" class="w3-green"><i class="fa fa-plus"></i></button>'
         . '</div>';
     }
     echo '</li>';
