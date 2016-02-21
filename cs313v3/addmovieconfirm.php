@@ -60,14 +60,15 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
     }
     if (isset($_SESSION['user_id'])) {
 
-        function check_ownership($userid, $movieid) {
-            $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
-            foreach ($db->query($query) as $row) {
-                if ($row['user_id'] == $userid) {
-                    return TRUE;
-                } else {
-                    return FALSE;
-                }
+        function check_ownership($usid, $mvid) {
+
+            $stmt = 'SELECT id FROM movie2user WHERE user_id = "' . $usid . '" AND movie_id = "' . $mvid . '" ';
+            $query = $db->query($stmt);
+
+            if (is_null($query)) {
+                return TRUE;
+            } else {
+                return FALSE;
             }
         }
 
@@ -80,8 +81,7 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
                 $addM->execute();
             }
         }
-        echo $_SESSION['user_id'];
-        echo '<br>' . $mid;
+
         insert_movie2user($_SESSION['user_id'], $mid);
     }
 }
