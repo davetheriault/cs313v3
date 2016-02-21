@@ -80,7 +80,8 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
                 $addM->execute();
             }
         }
-
+        echo $_SESSION['user_id'];
+        echo '<br>' . $mid;
         insert_movie2user($_SESSION['user_id'], $mid);
     }
 }
