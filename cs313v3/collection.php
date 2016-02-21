@@ -42,7 +42,7 @@
                             }
                         }   */
                         
-                        foreach ($db->query('SELECT * FROM movie INNER JOIN movie2user ON movie.id=movie2user.movie_id WHERE movie2user.user_id = "'.$_SESSION['user_id'].'" ORDER BY movie.title') as $info) {
+                        foreach ($db->query('SELECT * FROM movie INNER JOIN movie2user ON movie.id=movie2user.movie_id WHERE movie2user.user_id = "'.$_SESSION['user_id'].'" ORDER BY movie.alpha') as $info) {
                             echo '<li><div class="w3-container">'
                                 . '<div class="w3-half"><strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong></div>'
                                 . '<div class="w3-quarter"><img src="../cs313v3/images/' . $info['mpaa'] . '.jpg" alt="' . $info['mpaa'] . '"/></div>'

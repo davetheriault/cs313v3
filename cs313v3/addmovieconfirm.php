@@ -51,7 +51,7 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
         }
     }
     if (isset($_SESSION['user_id'])) {
-
+        echo 'isset Session User Id';
         function check_ownership($userid, $movieid) {
             echo '<br>check_ownership called';
             $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
