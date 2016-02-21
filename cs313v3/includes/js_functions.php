@@ -9,9 +9,10 @@
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
         xmlhttp.onreadystatechange = function () {
-                document.getElementById("results").innerHTML = xmlhttp.responseText;
             
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("results").innerHTML = xmlhttp.responseText;
+            } else {
                 document.getElementById("results").innerHTML = xmlhttp.responseText;
             }
         };
