@@ -29,7 +29,7 @@ foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars
     $owns = FALSE;
     $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . $info['id'] . '"';
     foreach ($db->query($query) as $row) {
-        if ($row['user_id'] == $_SESSION['user_id']) {
+        if ($row['user_id'] == $_GET['user']) {
             $owns = TRUE;
         }
     }
