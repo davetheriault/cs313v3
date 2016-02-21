@@ -10,14 +10,9 @@ $dbName = "dave";
 
 $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-function check_ownership($userid, $movieid) {
-    $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
-    foreach ($db->query($query) as $row) {
-        if ($row['user_id'] == $userid) {
-            return TRUE;
-        } 
-    }
-    return FALSE;
+if (isset($_GET['user']) && is_numeric($_GET['add']) && $_GET['add'] !== 0) {
+    $add = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("'.$_GET['user'].'", "'.$_GET['add'].'")');
+    $add->execute();
 }
 
 echo '<div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">'
@@ -41,7 +36,7 @@ foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars
         echo '<div style="float: right;"><i style="color: lightgray;" class="fa fa-check"></i></div>';
     } else {
         echo '<div style="float: right;">'
-        . '<button onclick="showResults(' . $_GET['find'] . ', ' . $info['id'] . ')" class="w3-green"><i class="fa fa-plus"></i></button>'
+        . '<button onclick="showResults('.$_GET['find'].', '.$_GET['user'].', '.$info['id']')" class="w3-green"><i class="fa fa-plus"></i></button>'
         . '</div>';
     }
     echo '</li>';
