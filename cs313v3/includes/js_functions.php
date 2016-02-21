@@ -31,6 +31,8 @@
     }
 
     function addMov(userid, movieid, find) {
+        
+        window.alert('addMov called');
 
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -41,6 +43,7 @@
         }
         xmlhttp.onreadystatechange = function () {
             showResults(find, userid);
+            window.alert('onreadystatechange called');
         };
 
         xmlhttp.open("GET", "includes/addmovieajax.php?user=" + userid + "&mov=" + movieid, true);
