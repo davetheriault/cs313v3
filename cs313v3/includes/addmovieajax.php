@@ -8,6 +8,10 @@ $dbName = "dave";
 
 $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
+print_r($_GET['user']);
+print_r($_GET['mov']);
+
 $db->exec('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $_GET['user'] . '", "' . $_GET['mov'] . '")');
+
 
 ?>

@@ -30,7 +30,7 @@
         showResults(find, noadd);
     }
 
-    function addMov(userid, movieid, find) {
+    function addMov(userid, movieid) {
         
         window.alert('addMov called');
 
@@ -41,10 +41,6 @@
             // code for IE6, IE5
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.onreadystatechange = function () {
-            showResults(find, userid);
-            window.alert('onreadystatechange called');
-        };
 
         xmlhttp.open("GET", "includes/addmovieajax.php?user=" + userid + "&mov=" + movieid, true);
 
