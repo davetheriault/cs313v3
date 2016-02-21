@@ -20,9 +20,15 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
     $mpaa = $_POST['mpaa'];        // echo '<br>mpaa: '.$mpaa;
     $run = $_POST['runtime'];      // echo '<br>runtime: '.$run;
     $year = $_POST['year'];      //   echo '<br>year: '.$year;
+    
+    if (strpos($movtitle, 'The ') == 0) {
+        $alpha = str_replace('The ', '', $movtitle);
+    } else {
+        $alpha = $movtitle;
+    }
 
-    $insert = 'INSERT INTO movie (title, mpaa, runtime, release_year) ';
-    $insert .= 'VALUES ("' . $movtitle . '", "' . $mpaa . '", "' . $run . '", "' . $year . '") ';
+    $insert = 'INSERT INTO movie (title, mpaa, runtime, release_year, alpha) ';
+    $insert .= 'VALUES ("' . $movtitle . '", "' . $mpaa . '", "' . $run . '", "' . $year . '", "' . $alpha . '") ';
 
     $addMov = $db->prepare($insert);
     $addMov->execute();
@@ -51,13 +57,10 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
         }
     }
     if (isset($_SESSION['user_id'])) {
-        echo 'isset Session User Id';
         function check_ownership($userid, $movieid) {
-            echo '<br>check_ownership called';
             $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
             foreach ($db->query($query) as $row) {
                 if ($row['user_id'] == $userid) {
-                    echo '<br>Match';
                     return TRUE;
                 } else {
                     return FALSE;
@@ -67,15 +70,12 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
 
         function insert_movie2user($userid, $movieid) {
 
-            echo '<br>insert movie2user';
             $exists = check_ownership($userid, $movieid);
-            echo '<br>' . $exists;
             if ($exists != TRUE) {
                 try {
                     $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $userid . '", "' . $movieid . '")');
                     $addM->execute();
                 } catch (Exception $ex) {
-                    echo '<br>' . $ex;
                 }
             }
         }
