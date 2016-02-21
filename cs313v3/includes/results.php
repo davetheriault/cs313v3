@@ -36,7 +36,7 @@ foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars
         echo '<div style="float: right;"><i style="color: lightgray;" class="fa fa-check"></i></div>';
     } else {
         echo '<div style="float: right;">'
-        . '<button onclick="showResults('.$_GET['find'].', '.$_GET['user'].', '.$info['id'].')" class="w3-green"><i class="fa fa-plus"></i></button>'
+        . '<button type="button" onclick="showResults('.$_GET['find'].', '.$_GET['user'].', '.$info['id'].')" class="w3-green"><i class="fa fa-plus"></i></button>'
         . '</div>';
     }
     echo '</li>';
