@@ -18,7 +18,7 @@
                     <ul class="w3-ul">
 
                         <?php
-                        foreach (($db->query('SELECT movie_id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '"')) as $movie) {
+                        /*foreach (($db->query('SELECT movie_id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '"')) as $movie) {
                             foreach (($db->query('SELECT * FROM movie WHERE id = "' . $movie['movie_id'] . '" ORDER BY title')) as $info) {
                                 echo '<li><div class="w3-container">'
                                 . '<div class="w3-half"><strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong></div>'
@@ -27,6 +27,7 @@
                                 . '</div></li>';
 
 
+                                
                                 /*  echo '<li><h4><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></h4>'
                                   . '<ul class="w3-ul"><li>MPAA Rating: ' . $info['mpaa'] . '</li>'
                                   . '<li>Runtime: ' . $info['runtime'] . '</li>'
@@ -37,8 +38,16 @@
                                   echo '<a href="genre.php?genre=' . htmlentities($genre['name']) . '">' . $genre['name'] . '</a> ';
                                   }
                                   }
-                                  echo '</li></ul></li>'; */
+                                  echo '</li></ul></li>'; 
                             }
+                        }   */
+                        
+                        foreach ($db->query('SELECT * FROM movie INNER JOIN movie2user ON movie.id=movie2user.movie_id WHERE movie2user.user_id = "'.$_SESSION['user_id'].'" ORDER BY movie.title') as $list) {
+                            echo '<li><div class="w3-container">'
+                                . '<div class="w3-half"><strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong></div>'
+                                . '<div class="w3-quarter"><img src="../cs313v3/images/' . $info['mpaa'] . '.jpg" alt="' . $info['mpaa'] . '"/></div>'
+                                . '<div class="w3-quarter">(' . $info['release_year'] . ')</div>'
+                                . '</div></li>';
                         }
                         ?>
                     </ul>
