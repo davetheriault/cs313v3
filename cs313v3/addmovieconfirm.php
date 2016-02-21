@@ -4,6 +4,8 @@
 
 <?php
 
+$mid = NULL;
+
 if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
     if (!is_numeric($_POST['year']) || strlen($_POST['year']) != 4) {
         $_SESSION['message'] = 'Release Year must be a four digit year';
@@ -20,7 +22,7 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
     $mpaa = $_POST['mpaa'];        // echo '<br>mpaa: '.$mpaa;
     $run = $_POST['runtime'];      // echo '<br>runtime: '.$run;
     $year = $_POST['year'];      //   echo '<br>year: '.$year;
-    
+
     if (strpos($movtitle, 'The ') == 0) {
         $alpha = str_replace('The ', '', $movtitle);
     } else {
@@ -57,6 +59,7 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
         }
     }
     if (isset($_SESSION['user_id'])) {
+
         function check_ownership($userid, $movieid) {
             $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
             foreach ($db->query($query) as $row) {
@@ -72,11 +75,9 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
 
             $exists = check_ownership($userid, $movieid);
             if ($exists != TRUE) {
-                try {
-                    $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $userid . '", "' . $movieid . '")');
-                    $addM->execute();
-                } catch (Exception $ex) {
-                }
+
+                $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $userid . '", "' . $movieid . '")');
+                $addM->execute();
             }
         }
 

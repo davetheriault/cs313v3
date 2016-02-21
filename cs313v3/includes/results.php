@@ -16,7 +16,7 @@ echo '<div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">'
  . '<div class="w3-container w3-padding">'
  . '<ul class="w3-ul">';
 
-foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars($_GET['find']) . '%" ORDER BY title') as $info) {
+foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars($_GET['find']) . '%" ORDER BY alpha') as $info) {
     $owns = FALSE;
     $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . $info['id'] . '"';
     foreach ($db->query($query) as $row) {
