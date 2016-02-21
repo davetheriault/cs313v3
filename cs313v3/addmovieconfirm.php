@@ -50,13 +50,32 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
             }
         }
     }
-    if (isset($_SESSION['user_id'])) {         
-        
+    if (isset($_SESSION['user_id'])) {
+
+        function check_ownership($userid, $movieid) {
+            $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
+            foreach ($db->query($query) as $row) {
+                if ($row['user_id'] == $userid) {
+                    return TRUE;
+                } else {
+                    return FALSE;
+                }
+            }
+        }
+
+        function insert_movie2user($userid, $movieid) {
+
+            $exists = check_ownership($userid, $movieid);
+
+            if ($exists != TRUE) {
+                $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $userid . '", "' . $movieid . '")');
+                $addM->execute();
+            }
+        }
+
         insert_movie2user($_SESSION['user_id'], $mid);
-        
     }
 }
 
 redirect_to('collection.php');
-
 ?>
