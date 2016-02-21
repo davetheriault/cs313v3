@@ -1,6 +1,6 @@
 <?php require 'includes/session.php'; ?>
 <?php require 'includes/dbConnect.php'; ?>
-<?php include 'includes/functions.php'; ?>
+<?php require 'includes/functions.php'; ?>
 
 <?php
 
@@ -53,9 +53,11 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
     if (isset($_SESSION['user_id'])) {
 
         function check_ownership($userid, $movieid) {
+            echo '<br>check_ownership called';
             $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
             foreach ($db->query($query) as $row) {
                 if ($row['user_id'] == $userid) {
+                    echo '<br>Match';
                     return TRUE;
                 } else {
                     return FALSE;
@@ -65,11 +67,16 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
 
         function insert_movie2user($userid, $movieid) {
 
+            echo '<br>insert movie2user';
             $exists = check_ownership($userid, $movieid);
-
+            echo '<br>' . $exists;
             if ($exists != TRUE) {
-                $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $userid . '", "' . $movieid . '")');
-                $addM->execute();
+                try {
+                    $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $userid . '", "' . $movieid . '")');
+                    $addM->execute();
+                } catch (Exception $ex) {
+                    echo '<br>' . $ex;
+                }
             }
         }
 
