@@ -45,6 +45,11 @@
         xmlhttp.open("GET", "includes/addmovieajax.php?user=" + userid + "&mov=" + movieid, true);
 
         xmlhttp.send();
+        xmlhttp.onreadystatechange = function(){
+          if (xmlhttp.readyState == 4) {
+              document.getElementById('find').keypress();
+          }  
+        };
     }
     
 
