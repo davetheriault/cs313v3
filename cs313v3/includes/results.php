@@ -2,8 +2,13 @@
 <?php include 'includes/dbConnect.php'; ?>
 <?php include 'includes/functions.php'; ?>
 
-
 <?php
+
+$sql = 'SELECT * FROM movie WHERE title LIKE "%'.$_GET['find'].'%" ORDER BY title';
+$query = $db->prepare($sql);
+$query->execute();
+$list = $query->fetchAll(PDO::FETCH_ASSOC);
+
 if (isset($_GET['add']) && $_GET['add'] != '') {
 
     insert_movie2user($_SESSION['user_id'], $_GET['add']);
@@ -15,8 +20,8 @@ echo '<div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">'
    .      '<div class="w3-container w3-padding">'
    .         '<ul class="w3-ul">';
 
-foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . $_GET['find'] . '%" ORDER BY title') as $info) {
-    $owns = check_ownership($_SESSION['user_id'], $info['id']);
+foreach ($list as $info) {
+    //$owns = check_ownership($_SESSION['user_id'], $info['id']);
     echo '<li>';
     echo '<strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong>'
     . ' <img src="../cs313v3/images/' . $info['mpaa'] . '.jpg" alt="' . $info['mpaa'] . '"/>'
