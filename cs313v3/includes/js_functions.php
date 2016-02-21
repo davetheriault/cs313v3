@@ -31,5 +31,7 @@
         }
         showResults(find, noadd);
     }
+    
+    document.getElementsByClassName('addthing').;
 
 </script>

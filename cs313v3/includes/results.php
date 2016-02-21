@@ -10,7 +10,7 @@ $dbName = "dave";
 
 $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-if (isset($_GET['user']) && is_numeric($_GET['add']) && $_GET['add'] !== 0) {
+if (isset($_GET['user']) && $_GET['add'] !== 0) {
     $add = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("'.$_GET['user'].'", "'.$_GET['add'].'")');
     $add->execute();
 }
@@ -36,7 +36,7 @@ foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars
         echo '<div style="float: right;"><i style="color: lightgray;" class="fa fa-check"></i></div>';
     } else {
         echo '<div style="float: right;">'
-        . '<button type="button" onclick="showResults("'.$_GET['find'].'", '.$_GET['user'].', '.$info['id'].')" class="w3-green"><i class="fa fa-plus"></i></button>'
+        . '<button class="addthing w3-green" onclick="showResults("'.$_GET['find'].'", '.$_GET['user'].', '.$info['id'].')" ><i class="fa fa-plus"></i></button>'
         . '</div>';
     }
     echo '</li>';
