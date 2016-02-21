@@ -1,6 +1,16 @@
 
 
 <?php
+function check_ownership($userid, $movieid) {
+    $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
+    foreach ($db->query($query) as $row) {
+        if ($row['user_id'] == $userid) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+}
 
 $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
 $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
@@ -16,7 +26,7 @@ echo '<div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">'
  . '<ul class="w3-ul">';
 
 foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars($_GET['find']) . '%" ORDER BY title') as $info) {
-    //$owns = check_ownership($_SESSION['user_id'], $info['id']);
+    $owns = check_ownership($_SESSION['user_id'], $info['id']);
     echo '<li>';
     echo '<strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong>'
     . ' <img src="../cs313v3/images/' . $info['mpaa'] . '.jpg" alt="' . $info['mpaa'] . '"/>'
