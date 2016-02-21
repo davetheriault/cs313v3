@@ -31,8 +31,8 @@
     }
 
     function addMov(userid, movieid) {
-        
-        window.alert('addMov called');
+
+
 
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -45,13 +45,16 @@
         xmlhttp.open("GET", "includes/addmovieajax.php?user=" + userid + "&mov=" + movieid, true);
 
         xmlhttp.send();
-        xmlhttp.onreadystatechange = function(){
-          if (xmlhttp.readyState == 4) {
-              document.getElementById('find').keypress();
-          }  
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4) {
+                var e = document.createEventObject("KeyboardEvent");
+                e.keyCode = keyCode;
+
+                document.getElementById('find').fireEvent("onkeyup", e);
+            }
         };
     }
-    
+
 
 
 </script>
