@@ -32,7 +32,7 @@ foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars
         echo '<div style="float: right;"><i style="color: lightgray;" class="fa fa-check"></i></div>';
     } else {
         echo '<div style="float: right;">'
-        . '<button class="addthing w3-green" onclick="addMov(' .$_GET['user']. ', ' .$info['id']. ')" ><i class="fa fa-plus"></i></button>'
+        . '<button class="addthing w3-green" onclick="addMov(' .$_GET['user']. ', ' .$info['id']. ', \'' .$_GET['find']. '\')" ><i class="fa fa-plus"></i></button>'
         . '</div>';
     }
     echo '</li>';

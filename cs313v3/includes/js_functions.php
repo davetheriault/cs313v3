@@ -30,9 +30,7 @@
         showResults(find, noadd);
     }
 
-    function addMov(userid, movieid) {
-
-
+    function addMov(userid, movieid, find) {
 
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -46,12 +44,7 @@
 
         xmlhttp.send();
         xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4) {
-                var e = document.createEventObject("KeyboardEvent");
-                e.keyCode = keyCode;
-
-                document.getElementById('find').fireEvent("onkeyup", e);
-            }
+            showResults(find, userid);
         };
     }
 
