@@ -1,6 +1,15 @@
 
 
 <?php
+
+$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
+$dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
+$dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$dbName = "dave";
+
+$db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
 function check_ownership($userid, $movieid) {
     $query = 'SELECT user_id FROM movie2user WHERE movie_id = "' . htmlspecialchars($movieid) . '"';
     foreach ($db->query($query) as $row) {
@@ -11,14 +20,6 @@ function check_ownership($userid, $movieid) {
         }
     }
 }
-
-$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
-$dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
-$dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-$dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-$dbName = "dave";
-
-$db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 echo '<div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">'
  . '<h3 class="w3-red w3-padding w3-margin-0">Results for &quot;' . $_GET['find'] . '&quot;</h3>'
