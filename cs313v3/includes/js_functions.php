@@ -10,11 +10,10 @@
         }
         xmlhttp.onreadystatechange = function () {
             
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                document.getElementById("results").innerHTML = xmlhttp.responseText;
-            } else {
-                document.getElementById("results").innerHTML = xmlhttp.responseText;
-            }
+            if (xmlhttp.readyState == 4) {
+                var inner = document.getElementById("results");
+                inner.innerHTML = xmlhttp.responseText;
+            } 
         };
         if (add === undefined) {
             xmlhttp.open("GET", "includes/results.php?find=" + str, true);
