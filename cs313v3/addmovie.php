@@ -34,11 +34,11 @@
                                     <li>
                                         <label for="runtime">Runtime:</label>
                                         <div class="w3-input">
-                                        <input class="" type="number" max="10" name="runtimeH" id="runtimeH" required/>
-                                        <input class="" type="number" max="59" name="runtimeS" id="runtimeS" required/>
+                                            <input style="display: inline; width: 50px;" type="number" max="10" name="runtimeH" id="runtimeH" placeholder="00" required/>h
+                                            <input style="display: inline; width: 50px;" type="number" max="59" name="runtimeS" id="runtimeS" placeholder="00" required/>s
                                         </div>
-                                        
-                                        </li>
+
+                                    </li>
                                     <li>
                                         <label for="year">Release Year:</label>
                                         <input class="w3-input" type="text" name="year" id="year" required />
