@@ -11,7 +11,8 @@ $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword)
 
 
 if (isset($_GET['mov'])) {
-    echo 'get mov set';
+    echo $_GET['mov'];
+    echo '<br>' . $_GET['user'];
     $db->exec('DELETE FROM movie2user WHERE user_id = "'.htmlspecialchars($_GET['user']).'" AND movie_id = "'.htmlspecialchars($_GET['mov']).'"');
 }
 echo '<ul class="w3-ul">';
