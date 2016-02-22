@@ -34,8 +34,8 @@
                                     <li>
                                         <label for="runtime">Runtime:</label>
                                         <div class="w3-input">
-                                            <input style="display: inline; width: 50px;" type="number" max="10" name="runtimeH" id="runtimeH" placeholder="00" required/>h
-                                            <input style="display: inline; width: 50px;" type="number" max="59" name="runtimeS" id="runtimeS" placeholder="00" required/>s
+                                            <input style="display: inline; width: 50px;" type="number" max="10" min="0" name="runtimeH" id="runtimeH" placeholder="00" oninput="addZero(this)" required/>h
+                                            <input style="display: inline; width: 50px;" type="number" max="59" min="0" name="runtimeS" id="runtimeS" placeholder="00" oninput="addZero(this)" required/>s
                                         </div>
 
                                     </li>
@@ -88,3 +88,11 @@
 </main>
 
 <?php include 'includes/footer.php'; ?>
+
+<script>
+    function addZero(input) {
+        if (input.value < 10) {
+            input.value = "0" + input.value;
+        }
+    }
+    </script>
