@@ -21,8 +21,8 @@
 
                     <form class="w3-form" id="movieSearch">
                         <div class="w3-row">
-                        <?php echo '<input class="w3-col s10 m10 l10 w3-input w3-btn w3-light-grey" type="text" placeholder="Search Movie Titles..." name="find" id="find" onkeyup="showResults(this.value, '.$_SESSION['user_id'].')"/>'; ?>
-                            <button class="w3-col s2 m2 l2 w3-input w3-btn w3-grey" onclick="search()">Find</button>   
+                        <?php echo '<input class="w3-col s10 m10 l10 w3-input w3-btn w3-light-grey" type="text" placeholder="Search for titles containing..." name="find" id="find" onkeyup="showResults(this.value, '.$_SESSION['user_id'].')"/>'; ?>
+                           
                         </div>
                     </form>
                 </div>
