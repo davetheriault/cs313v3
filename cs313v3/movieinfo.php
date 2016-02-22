@@ -26,6 +26,11 @@ $info = $info0[0];
                     <ul class="w3-ul">
 
                         <?php
+                        $stmt = 'SELECT * FROM movie WHERE id = "' . $_GET['id'] . '" LIMIT 1';
+                        $query = $db->prepare($stmt);
+                        $query->execute();
+                        $got = $query->fetchAll(PDO::FETCH_ASSOC);
+                        $info = $got[0];
                         echo '<li><h4>' . $info['title'] . '</h4>'
                         . '<ul class="w3-ul"><li>MPAA Rating: ' . $info['mpaa'] . '</li>'
                         . '<li>Runtime: ' . $info['runtime'] . '</li>'

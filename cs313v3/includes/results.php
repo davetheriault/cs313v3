@@ -25,7 +25,7 @@ foreach ($db->query('SELECT * FROM movie WHERE title LIKE "%' . htmlspecialchars
         }
     }
     echo '<li>';
-    echo '<strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '">' . $info['title'] . '</a></strong>'
+    echo '<strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '&id=' . htmlentities($info['id']) . '">' . $info['title'] . '</a></strong>'
     . ' <img src="../cs313v3/images/' . $info['mpaa'] . '.jpg" alt="' . $info['mpaa'] . '"/>'
     . ' (' . $info['release_year'] . ')';
     if ($owns === TRUE) {
