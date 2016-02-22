@@ -60,31 +60,16 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
     }
     if (isset($_SESSION['user_id'])) {
 
-        function check_ownership($usid, $mvid) {
+        $stmt = 'SELECT id FROM movie2user WHERE user_id = "' . $_SESSION['user_id'] . '" AND movie_id = "' . $mid . '" ';
+        $db->query($stmt);
 
-            $stmt = 'SELECT id FROM movie2user WHERE user_id = "' . $usid . '" AND movie_id = "' . $mvid . '" ';
-            $query = $db->query($stmt);
+        if (is_null($query)) {
 
-            if (is_null($query)) {
-                return TRUE;
-            } else {
-                return FALSE;
-            }
+            $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $_SESSION['user_id'] . '", "' . $mid . '")');
+            $addM->execute();
         }
-
-        function insert_movie2user($userid, $movieid) {
-
-            $exists = check_ownership($userid, $movieid);
-            if ($exists != TRUE) {
-
-                $addM = $db->prepare('INSERT INTO movie2user (user_id, movie_id) VALUES ("' . $userid . '", "' . $movieid . '")');
-                $addM->execute();
-            }
-        }
-
-        insert_movie2user($_SESSION['user_id'], $mid);
     }
-}
 
-redirect_to('collection.php');
+    redirect_to('collection.php');
+}
 ?>
