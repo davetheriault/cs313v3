@@ -52,7 +52,7 @@
         var conf = confirm('Delete ' + title + '? \nAre you sure?');
         if (conf === true) {
             delMov(user, movie);
-        } 
+        }
     }
 
     function delMov(userid, movieid) {
@@ -69,10 +69,10 @@
 
         xmlhttp.send();
         xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4) {
-                var inner = document.getElementById("collection");
-                inner.innerHTML = xmlhttp.responseText;
-            }
+
+            var inner = document.getElementById("collection");
+            inner.innerHTML = xmlhttp.responseText;
+
         };
     }
 
