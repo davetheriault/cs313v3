@@ -17,6 +17,7 @@ if (isset($_GET['mov'])) {
 }
 echo '<ul class="w3-ul">';
 foreach ($db->query('SELECT * FROM movie INNER JOIN movie2user ON movie.id=movie2user.movie_id WHERE movie2user.user_id = "' . $_GET['user'] . '" ORDER BY movie.alpha') as $info) {
+    var_dump($info);
     echo '<li><div class="w3-container">'
     . '<div class="w3-half"><strong><a href="movieinfo.php?title=' . htmlentities($info['title']) . '&id=' . htmlentities($info['movie_id']) . '">' . $info['title'] . '</a></strong></div>'
     . '<div class="w3-quarter"><img src="../cs313v3/images/' . $info['mpaa'] . '.jpg" alt="' . $info['mpaa'] . '"/></div>'
