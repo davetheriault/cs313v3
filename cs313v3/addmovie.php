@@ -22,7 +22,7 @@
                                         <input class="w3-input" name="title" id="title" type="text" required />
                                     </li>
                                     <li>
-                                        <label for="mpaa">Rating:</label>
+                                        <label for="mpaa">MPAA Rating:</label>
                                         <select class="w3-select" name="mpaa" id="mpaa" required >
                                             <option disabled="disabled" selected>Select an option...</option>
                                             <option value="G">G <img src="images/G.jpg" /></option>
@@ -33,8 +33,12 @@
                                     </li>
                                     <li>
                                         <label for="runtime">Runtime:</label>
-                                        <input class="w3-input" type="time" name="runtime" id="runtime" />
-                                    </li>
+                                        <div class="w3-input">
+                                        <input class="" type="number" max="10" name="runtimeH" id="runtimeH" required/>
+                                        <input class="" type="number" max="59" name="runtimeS" id="runtimeS" required/>
+                                        </div>
+                                        
+                                        </li>
                                     <li>
                                         <label for="year">Release Year:</label>
                                         <input class="w3-input" type="text" name="year" id="year" required />

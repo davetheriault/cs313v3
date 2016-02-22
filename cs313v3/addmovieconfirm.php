@@ -17,6 +17,7 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
         redirect_to('addmovie.php');
         exit;
     }
+    
 
     $movtitle = $_POST['title'];   // echo '<br>title: '.$movtitle;
     $mpaa = $_POST['mpaa'];        // echo '<br>mpaa: '.$mpaa;
