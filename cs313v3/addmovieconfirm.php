@@ -21,7 +21,7 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
 
     $movtitle = $_POST['title'];   // echo '<br>title: '.$movtitle;
     $mpaa = $_POST['mpaa'];        // echo '<br>mpaa: '.$mpaa;
-    $run = $_POST['runtime'];      // echo '<br>runtime: '.$run;
+    $run = $_POST['runtimeH'] . ':' . $_POST['runtimeS'] . ':00';      // echo '<br>runtime: '.$run;
     $year = $_POST['year'];      //   echo '<br>year: '.$year;
 
     if (strpos($movtitle, 'The ') == 0) {
