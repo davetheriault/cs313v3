@@ -9,6 +9,9 @@ $dbName = "dave";
 
 $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
+print_r($_GET['user']);
+print_r($_GET['mov']);
+
 if (isset($_GET['mov'])) {
     $db->exec('DELETE FROM movie2user WHERE user_id = "'.htmlspecialchars($_GET['user']).'" AND movie_id = "'.htmlspecialchars($_GET['mov']).'"');
 }
