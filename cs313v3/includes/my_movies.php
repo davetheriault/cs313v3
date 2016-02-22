@@ -13,7 +13,7 @@ $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword)
 if (isset($_GET['mov'])) {
     echo $_GET['mov'];
     echo '<br>' . $_GET['user'];
-    $db->exec('DELETE FROM movie2user WHERE user_id = "'.htmlspecialchars($_GET['user']).'" AND movie_id = "'.htmlspecialchars($_GET['mov']).'"');
+    $db->exec('DELETE FROM movie2user WHERE user_id = '.htmlspecialchars($_GET['user']).' AND movie_id = '.htmlspecialchars($_GET['mov']).' ');
 }
 echo '<ul class="w3-ul">';
 foreach ($db->query('SELECT * FROM movie INNER JOIN movie2user ON movie.id=movie2user.movie_id WHERE movie2user.user_id = "' . $_GET['user'] . '" ORDER BY movie.alpha') as $info) {
