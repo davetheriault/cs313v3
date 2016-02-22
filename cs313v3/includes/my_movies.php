@@ -21,7 +21,7 @@ foreach ($db->query('SELECT * FROM movie INNER JOIN movie2user ON movie.id=movie
     . '<div class="w3-quarter"><img src="../cs313v3/images/' . $info['mpaa'] . '.jpg" alt="' . $info['mpaa'] . '"/></div>'
     . '<div class="w3-quarter">(' . $info['release_year'] . ')'
     . '<div style="float: right;">'
-    . '<button class="delthing w3-red" onclick="confirm_del(' . $_GET['user'] . ', ' . $info['movie_id'] . ', \'' . $info['title'] . '\')" ><i class="fa fa-minus"></i></button>'
+    . '<button class="delthing w3-red" title="Remove From Collection" onclick="confirm_del(' . $_GET['user'] . ', ' . $info['movie_id'] . ', \'' . $info['title'] . '\')" ><i class="fa fa-minus"></i></button>'
     . '</div></div>'
     . '</div></li>';
 }

@@ -41,3 +41,5 @@
 </main>
 
 <?php include 'includes/footer.php'; ?>
+
+<?php echo '<script>window.onload=showResults("", '.$_SESSION['user_id'].')</script>'; ?>
