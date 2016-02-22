@@ -35,7 +35,7 @@
                                         <label for="runtime">Runtime:</label>
                                         <div class="w3-input">
                                             <input style="display: inline; width: 40px;" type="number" max="10" min="0" name="runtimeH" id="runtimeH" placeholder="00" oninput="addZero(this)" required/> h
-                                            <input style="display: inline; width: 40px;" type="number" max="59" min="0" name="runtimeS" id="runtimeS" placeholder="00" oninput="addZero(this)" required/> s
+                                            <input style="display: inline; width: 40px;" type="number" max="59" min="0" name="runtimeS" id="runtimeS" placeholder="00" oninput="addZero(this)" required/> m
                                         </div>
 
                                     </li>
