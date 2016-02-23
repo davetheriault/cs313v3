@@ -12,9 +12,9 @@
 
     function fixedfooter() {
         var sh = $(window).height();
-        var dh = $(document).height();
+        var dh = $(document.body).height();
         if (dh < sh) {
-            var foot = document.getElementsByTagName("FOOTER");
+            var foot = document.getElementsByTagName("footer");
             foot.style.position = "fixed";
             foot.style.bottom = 0;
         }
