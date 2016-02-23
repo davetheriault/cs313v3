@@ -10,7 +10,7 @@
 <main class="w3-container">
     <div class="w3-row">
 
-        <div class="w3-col s8 m8 l8">
+        <div class="w3-col s12m8 l8">
             <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
                 <h3 class="w3-red w3-padding w3-margin-0"><span style="text-transform: uppercase;"><?php echo $_SESSION['username']; ?></span>&apos;s Movie Collection</h3>
                 <div id="collection" class="w3-container w3-padding" ></div>
@@ -46,7 +46,7 @@
 
             </div>
         </div>
-        <div class="w3-col s4 m4 l4">
+        <div class="w3-col s12 m4 l4">
 <?php require 'includes/management.php'; ?>
         </div>        
     </div>
