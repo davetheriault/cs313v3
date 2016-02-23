@@ -32,9 +32,12 @@
                                 *********
                             </td>
                         </tr>
+                        <tr>
+                            <td colspan="2"><a href="accountedit.php">Change Username/Password</a></td>
+                        </tr>
                     </table>
                     <div class="w3-col s0 m1 l2">&nbsp;</div></div>
-                    <div class="w3-padding-left-32"><a href="accountedit.php">Change Username/Password</a></div>
+                    
                 </div>
             </div>
         </div>
