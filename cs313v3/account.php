@@ -13,7 +13,8 @@
             <div class="w3-container w3-card-4 w3-white w3-padding-0 w3-margin">
                 <h3 class="w3-red w3-padding w3-margin-0"><span style="text-transform: uppercase;"><?php echo $_SESSION['username']; ?></span>&apos;s Movie Collection</h3>
                 <div id="collection" class="w3-container w3-padding" >
-                    <table class="w3-table w3-col s12 m10 l10">
+                    <div class="w3-col s0 m1 l2">&nbsp;</div>
+                    <table class="w3-table w3-col s12 m10 l8">
                         <tr>
                             <td>
                                 Username:
@@ -31,7 +32,8 @@
                             </td>
                         </tr>
                     </table>
-                    <p class="w3-padding-left-32"><a href="accountedit.php">Change Username/Password</a></p>
+                    <div class="w3-col s0 m1 l2">&nbsp;</div>
+                    <div class="w3-padding-left-32"><a href="accountedit.php">Change Username/Password</a></div>
                 </div>
             </div>
         </div>
