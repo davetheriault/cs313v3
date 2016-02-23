@@ -17,12 +17,19 @@ if (isset($_POST['addsubmit'])) {           // echo 'isset submit';
         redirect_to('addmovie.php');
         exit;
     }
-    
 
     $movtitle = $_POST['title'];   // echo '<br>title: '.$movtitle;
     $mpaa = $_POST['mpaa'];        // echo '<br>mpaa: '.$mpaa;
     $run = $_POST['runtimeH'] . ':' . $_POST['runtimeS'] . ':00';      // echo '<br>runtime: '.$run;
     $year = $_POST['year'];      //   echo '<br>year: '.$year;
+    
+    foreach ($db->query('SELECT release_year FROM movie WHERE title = "'.$movtitle.'"') as $chk) {
+        if ($chk['release_year'] == $year) {
+            $_SESSION['message'] = 'Movie Already in Database. Find it in "Find Movies".';
+            redirect_to('addmovie.php');
+            exit;
+        }
+    }
 
     if (strpos($movtitle, 'The ') == 0) {
         $alpha = str_replace('The ', '', $movtitle);
