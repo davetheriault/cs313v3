@@ -37,4 +37,7 @@ $table = "CREATE TABLE IF NOT EXISTS movie (
   PRIMARY KEY (id)
 ) ENGINE=InnoDB";
 $db->exec($table);
+
+echo "ok";
+
 ?>
